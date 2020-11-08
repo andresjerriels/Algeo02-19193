@@ -60,11 +60,3 @@ def cosine_sim(X, Y):
     cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
 
     return cosine
-
-''' buat node js:
-install node js
-buka terminal, ketik
-npm install -g yarn
-yarn global add create-react-app react-scripts (kalo gbs, buka powershell as administrator dlu trus jalanin Set-ExecutionPolicy RemoteSigned)
-npm install -g create-react-app
-npx create-react-app react-app (buat bkin react baru)'''
