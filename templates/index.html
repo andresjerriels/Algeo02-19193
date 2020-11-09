@@ -9,16 +9,17 @@
     <body>
         <form method="POST">
             <h1>Welcome to Doremi Search Engine</h1>
-            <p>Gunakan kata-kata dalam bahasa Indonesia!</p>
+            <p>Upload Dokumen Disini!</p>
             <div class="form">
                 <form action="/" method="POST" enctype=multipart/form-data>
-                  <input type=file name=file>
-                  <input type=submit value=Upload>
+                  <input type=file name=file multiple id="files">
+                  <input type=submit value=Upload class="button">
                 </form>
             </div>
+            <p>Gunakan kata-kata dalam bahasa Indonesia!</p>
             <input type="text" name="input-query" value="Search for Documents!" id="input" required>
             <br><br>
-            <input type="submit" value="Search!" id="search">
+            <input type="submit" value="Search!" class="button">
         </form>
     </body>
 </html>

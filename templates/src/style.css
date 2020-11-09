@@ -4,9 +4,9 @@
 }
 
 form {
-    margin: 5rem auto;
+    margin: 0 auto;
     width: 40rem;
-    height: 28rem;
+    height: 20rem;
 }
 
 h1 {
@@ -20,8 +20,8 @@ h1 {
 p {
     font-size: 2rem;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 10rem;
+    margin: 2rem auto;
+    margin-top: 5rem;
     color: white;
 }
 
@@ -36,8 +36,7 @@ p {
     margin: 0 auto;
     font-size: 2.5rem;
 }
-
-#search {
+.button {
     width: 8rem;
     font-size: 1.75rem;
     height: 3rem;
@@ -49,8 +48,14 @@ p {
     margin: 0 auto;
 }
 
-#search:hover {
+.button:hover {
     background-color: white;
     color: red;
     border-color: cyan;
+}
+
+#files {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
