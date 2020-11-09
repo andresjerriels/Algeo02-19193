@@ -3,7 +3,11 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
+from flask import send_from_directory
+from pathlib import Path
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from cosine_sim import cosine
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'txt'}
@@ -65,8 +69,6 @@ def delete_file(name):
     except:
         return 'There was an issue deleting your file'
 
-from flask import send_from_directory
-
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
@@ -74,7 +76,20 @@ def uploaded_file(filename):
 @app.route('/search', methods=['POST', 'GET'])
 def search_query():
     if request.method == 'POST':
-        pass
+        query = request.form
+        array = []
+        for path in pathlib.Path(UPLOAD_FOLDER).iterdir():
+            if path.is_file():
+                current_file = open(path, "r")
+                first = current_file.readline()
+                text = current_file.read()
+                jmlkata = len(split(text))
+                cos = cosine(query,doc)
+                elmt = {'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
+                array.append(elmt)
+                current_file.close()
+        array.sort(key = array.get('cos'), reverse = True)
+        
     else:
         return redirect('/')
 
