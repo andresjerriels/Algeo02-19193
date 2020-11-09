@@ -6,11 +6,10 @@
 {% block body %}
 
 <div class="files">
-    <h1>Search Engine Gugle</h1>
+    <h1>Uploaded Document</h1>
     {% if filenames|length < 1 %}
     <p>There are no files. Upload one below!</p>
     {% else %}
-    <h3>Daftar Dokumen</h3>
     <table>
         <tr>
             <th>File</th>
@@ -42,18 +41,6 @@
         <input type="text" name="query">
         <input type="submit" value="Search!">
     </form>
-</div>
-
-<div>
-    <h2>Hasil Pencarian</h2>
-    {% for element in array %}
-    <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
-    <p>Jumlah kata: {{ element.get('count') }}</p>
-    <p>Tingkat kemiripan: {{ element.get('cos') }}</p>
-    <p>{{ element.get('first') }}</p>
-    <br>
-    {% endfor %}
-
 </div>
 
 {% endblock %}

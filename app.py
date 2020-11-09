@@ -3,13 +3,10 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-from flask import send_from_directory
 from pathlib import Path
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
-from cosine_sim import cosine
 
-UPLOAD_FOLDER = './uploads'
+
+UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
@@ -69,29 +66,58 @@ def delete_file(name):
     except:
         return 'There was an issue deleting your file'
 
+from flask import send_from_directory
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+from cosine_sim import *
+
 @app.route('/search', methods=['POST', 'GET'])
 def search_query():
+    filenames = Documents.query.order_by(Documents.date_uploaded).all()
+
     if request.method == 'POST':
-        query = request.form
+        query = request.form['query']
         array = []
-        for path in pathlib.Path(UPLOAD_FOLDER).iterdir():
+        tftable = []
+        for path in Path(UPLOAD_FOLDER).iterdir():
             if path.is_file():
-                current_file = open(path, "r")
-                first = current_file.readline()
-                text = current_file.read()
-                jmlkata = len(split(text))
-                cos = cosine(query,doc)
-                elmt = {'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
+                txt = Path(path).read_text()
+                text = txt.replace('\n', '')
+                first = take1sentence(text)
+                jmlkata = len(text.split())
+                name = path_leaf(path)
+
+                step1_X = case_folding(query)
+                stemmed_X = stemming(step1_X)
+                tokenized_X = set(tokenize(stemmed_X))
+                querylist = list(tokenize(stemmed_X))
+
+                step1_Y = case_folding(text)
+                stemmed_Y = stemming(step1_Y)
+                tokenized_Y = set(tokenize(stemmed_Y))
+                textlist = list(tokenize(stemmed_Y))
+                """
+
+                tftable[0] = list(tokenized_X)
+                tftable[1] = querylist
+                wordDictA = dict.fromkeys(tokenized_X, 0)
+                for word in textlist:
+                    if word in wordDictA.keys():
+                        wordDictA[word] += 1"""
+
+
+                cos = cosine_sim(tokenized_X, tokenized_Y)
+                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
                 array.append(elmt)
-                current_file.close()
-        array.sort(key = array.get('cos'), reverse = True)
-        
+        array.sort(key=takeCos, reverse=True)
+
+        return render_template('home.html', array=array, filenames=filenames)
     else:
         return redirect('/')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

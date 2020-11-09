@@ -4,6 +4,32 @@ from nltk.tokenize import word_tokenize
 import re
 import string
 from pathlib import Path
+import ntpath
+
+
+def path_leaf(path):
+    head, tail = ntpath.split(path)
+    return tail or ntpath.basename(head)
+
+
+def takeCos(elem):
+    return elem.get('cos')
+
+'''
+def table_tf():
+    step1_X = case_folding(X)
+    stemmed_X = stemming(step1_X)
+    tokenized_X = set(tokenize(stemmed_X))
+
+    step1_Y = case_folding(Y)
+    stemmed_Y = stemming(step1_Y)
+    tokenized_Y = set(tokenize(stemmed_Y))
+'''
+
+def take1sentence(text):
+    if len(text) > 100:
+        text = text.partition('.')[0] + '.'
+    return text
 
 
 def tokenize(kalimat):
@@ -31,30 +57,10 @@ def stemming(kalimat):
 
     return stemmer.stem(kalimat)
 
-def cosine (query, doc):
-
-    txt = Path(doc).read_text()
-    Y = txt.replace('\n', '')
-
-    step1_X = case_folding(query)
-    stemmed_X = stemming(step1_X)
-    tokenized_X = set(tokenize(stemmed_X))
-
-    step1_Y = case_folding(Y)
-    stemmed_Y = stemming(step1_Y)
-    tokenized_Y = set(tokenize(stemmed_Y))
-    tokenized_Ylist = tokenize(stemmed_Y)
-
+def cosine_sim(tokenized_X, tokenized_Y):
     rvector = tokenized_X.union(tokenized_Y)
     l1 = []
     l2 = []
-
-    wordDictA = dict.fromkeys(tokenized_X, 0)
-    for word in tokenized_Ylist:
-        if word in wordDictA.keys():
-            wordDictA[word] += 1
-
-    #print(wordDictA)
 
     for word in rvector:
         if word in tokenized_X:
@@ -70,5 +76,49 @@ def cosine (query, doc):
     for i in range(len(rvector)):
         cnt += l1[i] * l2[i]
     cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
+
     return cosine
-    #print("Hasil cosine sim: " + str(cosine))
+"""
+X = input("Masukkan query: ")
+doc = input("Masukkan nama file txt: ")
+
+txt = Path(doc).read_text()
+Y = txt.replace('\n', '')
+
+step1_X = case_folding(X)
+stemmed_X = stemming(step1_X)
+tokenized_X = set(tokenize(stemmed_X))
+
+step1_Y = case_folding(Y)
+stemmed_Y = stemming(step1_Y)
+tokenized_Y = set(tokenize(stemmed_Y))
+tokenized_Ylist = tokenize(stemmed_Y)
+
+rvector = tokenized_X.union(tokenized_Y)
+l1 = []
+l2 = []
+
+wordDictA = dict.fromkeys(tokenized_X, 0)
+for word in tokenized_Ylist:
+    if word in wordDictA.keys():
+        wordDictA[word] += 1
+
+print(wordDictA)
+
+for word in rvector:
+    if word in tokenized_X:
+        l1.append(1)
+    else:
+        l1.append(0)
+    if word in tokenized_Y:
+        l2.append(1)
+    else:
+        l2.append(0)
+
+cnt = 0
+for i in range(len(rvector)):
+    cnt += l1[i] * l2[i]
+cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
+
+print("Hasil cosine sim: " + str(cosine))
+"""
