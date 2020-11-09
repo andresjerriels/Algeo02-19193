@@ -9,10 +9,10 @@
     <body>
         <form method="POST">
             <h1>Welcome to Doremi Search Engine</h1>
-            <p>Upload Dokumen Disini!</p>
+            <p>Upload Dokumen Disini! (File harus bertipe txt)</p>
             <div class="form">
                 <form action="/" method="POST" enctype=multipart/form-data>
-                  <input type=file name=file multiple id="files">
+                  <input type=file name=file multiple id="files" accept=".txt">
                   <input type=submit value=Upload class="button">
                 </form>
             </div>
