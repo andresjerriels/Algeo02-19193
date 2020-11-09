@@ -3,6 +3,7 @@ from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFacto
 from nltk.tokenize import word_tokenize
 import re
 import string
+from pathlib import Path
 
 
 def tokenize(kalimat):
@@ -31,32 +32,45 @@ def stemming(kalimat):
     return stemmer.stem(kalimat)
 
 
-def cosine_sim(X, Y):
-    step1_X = case_folding(X)
-    stemmed_X = stemming(step1_X)
-    tokenized_X = set(tokenize(stemmed_X))
+X = input("Masukkan query: ")
+doc = input("Masukkan nama file txt: ")
 
-    step1_Y = case_folding(Y)
-    stemmed_Y = stemming(step1_Y)
-    tokenized_Y = set(tokenize(stemmed_Y))
+txt = Path(doc).read_text()
+Y = txt.replace('\n', '')
 
-    rvector = tokenized_X.union(tokenized_Y)
-    l1 = []
-    l2 = []
+step1_X = case_folding(X)
+stemmed_X = stemming(step1_X)
+tokenized_X = set(tokenize(stemmed_X))
 
-    for word in rvector:
-        if word in tokenized_X:
-            l1.append(1)
-        else:
-            l1.append(0)
-        if word in tokenized_Y:
-            l2.append(1)
-        else:
-            l2.append(0)
+step1_Y = case_folding(Y)
+stemmed_Y = stemming(step1_Y)
+tokenized_Y = set(tokenize(stemmed_Y))
+tokenized_Ylist = tokenize(stemmed_Y)
 
-    cnt = 0
-    for i in range(len(rvector)):
-        cnt += l1[i] * l2[i]
-    cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
+rvector = tokenized_X.union(tokenized_Y)
+l1 = []
+l2 = []
 
-    return cosine
+wordDictA = dict.fromkeys(tokenized_X, 0)
+for word in tokenized_Ylist:
+    if word in wordDictA.keys():
+        wordDictA[word] += 1
+
+print(wordDictA)
+
+for word in rvector:
+    if word in tokenized_X:
+        l1.append(1)
+    else:
+        l1.append(0)
+    if word in tokenized_Y:
+        l2.append(1)
+    else:
+        l2.append(0)
+
+cnt = 0
+for i in range(len(rvector)):
+    cnt += l1[i] * l2[i]
+cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
+
+print("Hasil cosine sim: " + str(cosine))

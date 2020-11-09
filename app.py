@@ -2,17 +2,24 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
-UPLOAD_FOLDER = 'uploads/'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+UPLOAD_FOLDER = './uploads'
+ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 
 db = SQLAlchemy(app)
-class Document(db.Model):
-    name = db.Column(db.String(80), primary_key=True)
-    text = db.Column(db.Text, unique=True, nullable=False)
+
+class Documents(db.Model):
+    name = db.Column(db.String, primary_key=True)
+    date_uploaded = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return 'File %r' % self.name
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -25,7 +32,7 @@ def upload_file():
         if 'file' not in request.files:
             flash('No file part')
             return redirect(request.url)
-        file = request.files.getlist['file']
+        file = request.files['file']
         # if user does not select file, browser also
         # submit an empty part without filename
         if file.filename == '':
@@ -33,9 +40,30 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
-    return render_template('index.html')
+            new_file = Documents(name=filename)
+            try:
+                db.session.add(new_file)
+                db.session.commit()
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                return redirect('/')
+            except:
+                return 'There was an issue uploading your file'
+    else:
+        filenames = Documents.query.order_by(Documents.date_uploaded).all()
+        return render_template('home.html', filenames=filenames)
+
+@app.route('/delete/<string:name>')
+def delete_file(name):
+    file_to_delete = Documents.query.get_or_404(name)
+
+    try:
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'], name))
+        db.session.delete(file_to_delete)
+        db.session.commit()
+        return redirect('/')
+
+    except:
+        return 'There was an issue deleting your file'
 
 from flask import send_from_directory
 
@@ -43,22 +71,5 @@ from flask import send_from_directory
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
-from sqlalchemy import func
-import cosine_sim
-
-@app.route('/search', methods = ['GET','POST'])
-def search(results=None):
-    if request.method == 'POST':
-        keywords = request.form.get('query')
-        #masukin fungsi cosine similarity untuk ngecek
-        for path in pathlib.Path("a_directory").iterdir():
-            if path.is_file():
-                current_file = open(path, "r")
-                string = current_file.read()
-                
-                current_file.close()
-    return render_template('index.html', results=results)
-
 if __name__ == "__main__":
-    app.secret_key = 'super secret key'
     app.run(debug=True)
