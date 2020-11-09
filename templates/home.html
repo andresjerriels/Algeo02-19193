@@ -7,6 +7,9 @@
 
 <div class="files">
     <h1>Uploaded Document</h1>
+    {% if filenames|length < 1 %}
+    <p>There are no files. Upload one below!</p>
+    {% else %}
     <table>
         <tr>
             <th>File</th>
@@ -25,11 +28,21 @@
             </tr>
         {% endfor %}
     </table>
+    {% endif %}
 
     <form method=post enctype=multipart/form-data>
         <input type=file name=file>
         <input type=submit value=Upload>
     </form>
+
+    <br>
+
+    <div class="form">
+        <form action="/search" method="POST">
+            <input type="text" name="query">
+            <input type="submit" value="Search!">
+        </form>
+    </div>
 
 </div>
 {% endblock %}

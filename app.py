@@ -71,5 +71,12 @@ from flask import send_from_directory
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
+@app.route('/search', methods=['POST', 'GET'])
+def search_query():
+    if request.method == 'POST':
+        pass
+    else:
+        return redirect('/')
+
 if __name__ == "__main__":
     app.run(debug=True)
