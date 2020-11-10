@@ -4,6 +4,8 @@ Tugas Besar Aljabar Linier dan Geometri 2020/2021
 ## Table of contents
 * [Description](#description)
 * [Before you start](#before-you-start)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
 ## Description
 Program ini merupakan search engine dengan query berupa kalimat dalam bahasa Indonesia. Proses pencarian dokumen dilakukan berdasarkan dokumen-dokumen yang diunggah ke dalam program sebelum memulai pencarian. Proses pencarian dokumen yang paling sesuai dengan query dilakukan dengan menggunakan rumus cosine similarity (dot product) pada sistem temu balik aplikasi. Program akan menampilkan urutan dokumen berdasarkan tingkat kemiripannya dengan query, serta tabel yang merepresentasikan jumlah setiap kata pada dokumen yang sesuai dengan query.
