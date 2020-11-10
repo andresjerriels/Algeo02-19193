@@ -86,19 +86,16 @@ def search_query():
         stemmed_X = stemming(step1_X)
         tokenized_X = tokenize(stemmed_X)
         querylist = list(tokenize(stemmed_X))
-        querycol = set(querylist)
+        querycol = set(querylist) # nyari elemen unik querylist
 
-        array = []
-        tableheader = querycol
-
-        querytab = ['Query']
+        array = [] # untuk mengurutkan dokumen
+        tableheader = ['Query'] # header: query dan judul2 dokumen
         firstrow = []
-        for word in querycol:
+        for word in querycol: # first row adalah keywords di query
             count_query = sum(1 for words in querylist if words == word)
             firstrow.append(count_query)
 
-        querytab += firstrow
-        tftable = [querytab]
+        tftable = [firstrow] # baris pertama pada matriks tftable
         for path in Path(UPLOAD_FOLDER).iterdir():
             if path.is_file():
                 txt = Path(path).read_text()
@@ -126,17 +123,21 @@ def search_query():
                         wordDictA[word] += 1"""
 
                 rvector = set(tokenized_X).union(set(tokenized_Y))
-                cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y)
-                cos *= 100
+                cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
+                cos *= 100 # ubah ke persen
                 elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
-                array.append(elmt)
+                array.append(elmt) # nambah element ke array
 
-                tabletemp = [name]
-                tabletemp += lout
-                tftable.append(tabletemp)
+                tableheader.append(name)
+                tftable.append(lout) # nambah list data kemunculan kata ke matriks tftable
 
-        array.sort(key=takeCos, reverse=True)
-
+        array.sort(key=takeCos, reverse=True) # mengurutkan berdasarkan cosine sim
+        tftable = transpose(tftable) # transpose agar data per dokumen berada dalam 1 kolom bukan baris
+        
+        i = 0
+        for word in querycol: # menambah kolom pertama: kata2 unik pada query
+            tftable[i] = [word] + tftable[i]
+            i += 1
         return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader)
     else:
         return redirect('/')

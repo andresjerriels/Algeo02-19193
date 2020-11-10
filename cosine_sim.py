@@ -133,3 +133,13 @@ cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
 
 print("Hasil cosine sim: " + str(cosine))
 """
+
+def transpose(m):
+    col = len(m)
+    row = len(m[0])
+    new = [[0 for i in range (col)] for j in range (row)]
+    for i in range (row):
+        for j in range (col):
+            new[i][j] = m[j][i]
+    
+    return new
