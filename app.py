@@ -89,11 +89,9 @@ def search_query():
         querycol = set(querylist)
 
         array = []
-        #tftable = []
-        #tablecol = [query]
         tableheader = querycol
 
-        querytab = [query]
+        querytab = ['Query']
         firstrow = []
         for word in querycol:
             count_query = sum(1 for words in querylist if words == word)
@@ -126,9 +124,6 @@ def search_query():
                 for word in textlist:
                     if word in wordDictA.keys():
                         wordDictA[word] += 1"""
-
-
-                # tablecol.append(name)
 
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y)

@@ -59,7 +59,7 @@
     <table>
         <thead>
             <tr>
-                <th></th>
+                <th>Document\Term</th>
                 {% for element in tableheader %}
                 <th>{{element}}</th>
                 {% endfor %}
@@ -69,7 +69,7 @@
             {% for elmt in tftable %}
             <tr>
                 {% for e in elmt %}
-                <th>{{e}}</th>
+                <td>{{e}}</td>
                 {% endfor %}
             </tr>
             {% endfor %}
