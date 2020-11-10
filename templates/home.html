@@ -49,11 +49,33 @@
     {% for element in array %}
     <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
     <p>Jumlah kata: {{ element.get('count') }}</p>
-    <p>Tingkat kemiripan: {{ element.get('cos') }}</p>
+    <p>Tingkat kemiripan: {{ element.get('cos') }}%</p>
     <p>{{ element.get('first') }}</p>
     <br>
     {% endfor %}
 
-</div>
+    {% if tftable|length > 0 %}
+    <h2>Tabel Query</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                {% for element in tableheader %}
+                <th>{{element}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for elmt in tftable %}
+            <tr>
+                {% for e in elmt %}
+                <th>{{e}}</th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
 
+    </table>
+    {% endif %}
+</div>
 {% endblock %}

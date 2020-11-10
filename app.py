@@ -73,6 +73,8 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 from cosine_sim import *
+import numpy as np
+import pandas as pd
 
 @app.route('/search', methods=['POST', 'GET'])
 def search_query():
@@ -80,8 +82,25 @@ def search_query():
 
     if request.method == 'POST':
         query = request.form['query']
+        step1_X = case_folding(query)
+        stemmed_X = stemming(step1_X)
+        tokenized_X = tokenize(stemmed_X)
+        querylist = list(tokenize(stemmed_X))
+        querycol = set(querylist)
+
         array = []
-        tftable = []
+        #tftable = []
+        #tablecol = [query]
+        tableheader = querycol
+
+        querytab = [query]
+        firstrow = []
+        for word in querycol:
+            count_query = sum(1 for words in querylist if words == word)
+            firstrow.append(count_query)
+
+        querytab += firstrow
+        tftable = [querytab]
         for path in Path(UPLOAD_FOLDER).iterdir():
             if path.is_file():
                 txt = Path(path).read_text()
@@ -90,14 +109,14 @@ def search_query():
                 jmlkata = len(text.split())
                 name = path_leaf(path)
 
-                step1_X = case_folding(query)
+                '''step1_X = case_folding(query)
                 stemmed_X = stemming(step1_X)
                 tokenized_X = set(tokenize(stemmed_X))
-                querylist = list(tokenize(stemmed_X))
+                querylist = list(tokenize(stemmed_X))'''
 
                 step1_Y = case_folding(text)
                 stemmed_Y = stemming(step1_Y)
-                tokenized_Y = set(tokenize(stemmed_Y))
+                tokenized_Y = tokenize(stemmed_Y)
                 textlist = list(tokenize(stemmed_Y))
                 """
 
@@ -109,12 +128,21 @@ def search_query():
                         wordDictA[word] += 1"""
 
 
-                cos = cosine_sim(tokenized_X, tokenized_Y)
+                # tablecol.append(name)
+
+                rvector = set(tokenized_X).union(set(tokenized_Y))
+                cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y)
+                cos *= 100
                 elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
                 array.append(elmt)
+
+                tabletemp = [name]
+                tabletemp += lout
+                tftable.append(tabletemp)
+
         array.sort(key=takeCos, reverse=True)
 
-        return render_template('home.html', array=array, filenames=filenames)
+        return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader)
     else:
         return redirect('/')
 

@@ -57,27 +57,38 @@ def stemming(kalimat):
 
     return stemmer.stem(kalimat)
 
-def cosine_sim(tokenized_X, tokenized_Y):
-    rvector = tokenized_X.union(tokenized_Y)
+
+def cosine_sim(rvector, tokenized_X, tokenized_Y):
     l1 = []
     l2 = []
 
     for word in rvector:
-        if word in tokenized_X:
+        count_x = sum(1 for words in tokenized_X if words == word)
+        count_y = sum(1 for words in tokenized_Y if words == word)
+        l1.append(count_x)
+        l2.append(count_y)
+        '''if word in tokenized_X:
             l1.append(1)
         else:
             l1.append(0)
         if word in tokenized_Y:
             l2.append(1)
         else:
-            l2.append(0)
+            l2.append(0)'''
 
     cnt = 0
     for i in range(len(rvector)):
         cnt += l1[i] * l2[i]
-    cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5)
+        l1[i] = l1[i]**2
+        l2[i] = l2[i]**2
+    cosine = cnt / float((sum(l1) * sum(l2)) ** 0.5) #harusnya elementnya dikuadrat dulu ga si?
 
-    return cosine
+    lout = []
+    for word in set(tokenized_X):
+        count_Y_on_X = sum(1 for words in tokenized_Y if words == word)
+        lout.append(count_Y_on_X)
+
+    return cosine, lout
 """
 X = input("Masukkan query: ")
 doc = input("Masukkan nama file txt: ")
