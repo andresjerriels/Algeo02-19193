@@ -104,23 +104,10 @@ def search_query():
                 jmlkata = len(text.split())
                 name = path_leaf(path)
 
-                '''step1_X = case_folding(query)
-                stemmed_X = stemming(step1_X)
-                tokenized_X = set(tokenize(stemmed_X))
-                querylist = list(tokenize(stemmed_X))'''
-
                 step1_Y = case_folding(text)
                 stemmed_Y = stemming(step1_Y)
                 tokenized_Y = tokenize(stemmed_Y)
                 textlist = list(tokenize(stemmed_Y))
-                """
-
-                tftable[0] = list(tokenized_X)
-                tftable[1] = querylist
-                wordDictA = dict.fromkeys(tokenized_X, 0)
-                for word in textlist:
-                    if word in wordDictA.keys():
-                        wordDictA[word] += 1"""
 
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
