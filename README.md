@@ -25,11 +25,10 @@ Untuk melakukan instalasi cukup menjalankan perintah pada terminal:
 `pip install <nama_library>`
 
 Khusus untuk library nltk, silahkan menjalankan python pada terminal, lalu tuliskan:
-`import nltk`
-etc etc
+`import nltk `
 
 ## Inspiration
-Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari website [ini](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online, terutama dari stackoverflow.com dan github.com.
+Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari website [ini](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online.
 
 ## Contact
 Program ini dibuat oleh:
