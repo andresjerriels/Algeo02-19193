@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block head %}
+<link href="{{ url_for('static', filename='/css/redsus.png') }}" rel="shortcut icon">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}" type="text/css">
 <title>Search Engine</title>
 {% endblock %}
 
 {% block body %}
 
 <div class="files">
-    <h1>Search Engine Gugle</h1>
+    <h1>Welcome to Doremi Search Engine</h1>
+    <p>Upload Dokumen Disini! (File harus bertipe txt)</p>
     {% if filenames|length < 1 %}
     <p>There are no files. Upload one below!</p>
     {% else %}
@@ -32,7 +35,7 @@
     {% endif %}
 
     <form method=post enctype=multipart/form-data>
-        <input type=file name=file>
+        <input type=file name=file multiple accept=".txt">
         <input type=submit value=Upload>
     </form>
 </div>
