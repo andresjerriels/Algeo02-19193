@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
