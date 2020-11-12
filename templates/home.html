@@ -50,7 +50,9 @@
 </div>
 
 <div class="hasil">
+    {% if tftable|length > 0 %}
     <p>Hasil Pencarian</p>
+    {% endif %}
     {% for element in array %}
     <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
     <p>Jumlah kata: {{ element.get('count') }}</p>
