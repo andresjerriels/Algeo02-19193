@@ -1,0 +1,109 @@
+Apa Itu Web Developer?
+Akhir abad ke-20, internet telah tumbuh dan berkembang. secara masif. Dan, merevolusi kehidupan sosial manusia. Di dunia modern, hampir setiap orang memiliki akses internet. Dalam berbagai bentuk kegunaan. Sebagian besar, menggunakan internet setiap hari. Web Developer, muncul dan mengambil peran penting.
+Web developer menjadi suatu potensi. Yang dengan cepat, menjadi salah satu pilihan karier. Yang menarik. Dan tentunya, yang bergaji tinggi di dunia modern.
+Pertanyaannya, apa itu web developer? Apa yang sebenarnya, dilakukan olehnya?
+Secara harafiah, web developer artinya, pengembang web. Ia, merancang, membuat, dan melakukan berbagai hal, agar website berjalan dengan sempurna. Baik dalam bentuk situs yang telah jadi, dan dapat diakses setiap orang di internet. Maupun tujuan dari pembuatan website itu sendiri.
+Jadi, bukan hanya sebatas membuat website yang dapat online. Lebih dari itu, adalah tentang bagaimana fungsi website berjalan, sesuai dengan tujuan yang telah ditetapkan.
+Jika Anda mungkin berpikir, untuk belajar satu atau dua bahasa pemrograman, untuk menjadi web developer, atau sekedar ingin tahu, Anda berada dihalaman yang tepat. Kami telah menyusun, artikel ini secara komprehensif. Untuk menjawab, hal-hal yang berhubungan dengan web developer.
+Disini, akan mengurai jenis-jenis web developer. Dan memperlihatkan, perbedaan, antara; Web Desain dan web developer.
+Beberapa mungkin berpikir itu sama. Ya.. sama. Keduanya, berhubungan dengan website. Namun ada hal yang mendasar, membuat keduanya berbeda. Secara arti dan makna.
+Disini juga, akan membahas beberapa bahasa pemrograman paling populer. Yang biasa digunakan oleh web developer. Termasuk Python, JavaScript, dan HTML.
+Defenisi Web Developer
+Untuk Menjawab Pertanyaan “Apa Itu Web Developer?”, Pertama-Tama Kita Harus Melihat, Apa Yang Dilakukan Web Developer. Dan, Bagaimana Mereka Bekerja.
+Pengembang atau pemrogram web, adalah indifidu, kelompok kerja/perusahaan, mengerjakan desain web. Yang telah dibuat oleh klien, atau tim desain. Lalu, mengubahnya menjadi website. Mereka melakukan ini, dengan menulis baris-baris kode yang rumit, menggunakan berbagai bahasa.
+Web developer melakukan pekerjaan yang cukup sulit, karena pada dasarnya mereka menterjemahkan bahasa yang dipahami manusia, seperti bahasa Inggris, Indonesia, Arab atau lainnya, lalu mengimplementasikannya, ke bahasa yang dimengerti komputer. Seperti Python atau HTML.
+Seperti yang dapat Anda bayangkan, ini membutuhkan banyak waktu dan upaya. Serta, membutuhkan pemahaman yang rumit. Tentang berbagai bahasa pemrograman yang digunakan. Berbagai jenis pengembang, berspesialisasi dalam bidang yang berbeda, yang berarti bahwa, proyek web besar, biasanya merupakan kolaborasi, antara beberapa pengembang dari jenis pekerjaan yang berbeda.
+Jenis Web Developer
+Sayangnya, pertanyaan “Apa yang dilakukan web developer?”, Tidak memiliki satu jawaban sederhana. Seperti disebutkan di atas, ada beberapa jenis web developer. Masing-masing berfokus pada aspek berbeda. Untuk membangun website secara sempurna.
+Untuk memahami, apa itu web developer, sangat penting untuk mengetahui, ketiga jenis pengembang utama. Yakni front-end, back-end, dan full-stack.
+Pengembang front-end bertanggung jawab, atas bagian-bagian dari sebuah website yang dilihat dan berinteraksi dengan orang, pengembang back-end bertanggung jawab atas kode di belakang layar, yang mengontrol cara memuat dan menjalankan website, dan full-stack development, melakukan segalanya.
+Apakah setelah website selesai dibuat, pekerjaan web developer, juga selesai? Oh.. belum, pekerjaan sebenarnya baru saja dimulai.
+Front-End Web Developer
+Pengembang front-end, adalah seseorang yang mengerjakan desain website klien. Atau tim desain dan menulis kode yang diperlukan. Yang kemudian, mengimplementasikannya di web. Pengembang web front-end yang baik, akan fasih dalam setidaknya, tiga bahasa pemrograman. HTML, CSS, dan JavaScript.
+HTML, memungkinkan pengembang untuk menambahkan konten ke website, membuatnya menjadi bentuk pos, paragraf, dan tabel. CSS memungkinkan pengembang membentuk konten, dan mengatur hal-hal, seperti warna, ukuran, dan batas. JavaScript, memungkinkan dimasukkannya elemen interaktif, seperti tombol click. Ini akan kita bahas lebih jauh, nanti.
+Jadi, apa yang dilakukan web developer, ketika mereka bekerja di Front-End sebuah website?
+Yang menjadi tanggung jawab web developer, adalah memastikan bahwa, semua konten yang diperlukan untuk website, terlihat jelas dan dimengerti user, dan ditemukan di tempat yang tepat. Dalam beberapa kasus, front-end web developer, juga memiliki keterampilan menulis, yang memungkinkan mereka, untuk membuat konten. Pada website.
+Memastikan bahwa, warna yang tepat ada di tempat yang tepat. Terutama mengenai warna teks, warna latar belakang, dan header. Beberapa pengembang front-end terbaik, juga merupakan desainer yang sangat baik. Ini, memungkinkan mereka mengaplikasikan berbagai kebutuhan secara visual.
+Memastikan bahwa, semua tautan keluar diformat dengan benar, bahwa semua tombol berfungsi dengan baik, dan bahwa, website responsif dan menarik. Desain seluler, biasanya merupakan bagian penting dari pekerjaan, sementara itu, juga penting untuk memastikan bahwa, website akan ditampilkan dengan benar di semua browser web.
+Seperti yang Anda lihat, jawaban atas pertanyaan “Apa itu web developer?” Tentu tidak sederhana. Bahkan pengembang front-end merasa sulit, dan ini mungkin yang paling sederhana dari tiga jenis pengembangan untuk dipelajari.
+Back-End Developer
+Walaupun mungkin tampak seperti pengembang front-end, pekerjaan yang sulit. Seperti, memastikan bahwa sebuah website terlihat hebat, berfungsi dengan baik, dan mengandung konten yang benar, back-end web developer juga mempunyai tingkat kerumitan tersendiri.
+Sementara pengembang front-end bertanggung jawab untuk pemrograman sisi klien, pengembang back-end harus berurusan dengan sisi server.
+Ini berarti, mereka harus membuat kode dan program yang memberi daya; pada server website, database, dan aplikasi apa pun yang didalamnya. Yang paling penting, pada bagian back-end, adalah kemampuan untuk dapat membuat kode yang bersih dan efisien. Melakukan apa yang diinginkan, dengan cara secepat mungkin. Karena, kecepatan website adalah pertimbangan utama dalam hal optimasi. Seperti upaya SEO (Search enggine optimazion). Ini adalah faktor besar ketika menjadi back-end web developer.
+Untuk sepenuhnya menjelaskan apa itu web developer, penting untuk mengetahui bahwa, pengembang back-end menggunakan berbagai bahasa sisi-server. Membuat program yang rumit. Beberapa bahasa yang paling populer digunakan, termasuk PHP, Python, Java, dan Ruby.
+JavaScript juga menjadi semakin luas, sebagai bahasa pengembangan back-end, sementara SQL umumnya, digunakan untuk mengelola dan menganalisis data dalam database website
+Karena, website yang berbeda, memiliki kebutuhan yang berbeda. Pengembang back-end, harus fleksibel, mampu membuat program berbeda. Dan mereka benar-benar harus memiliki pemahaman yang jelas, dan mendalam, tentang bahasa yang mereka gunakan. Ini sangat penting, untuk memastikan bahwa, mereka dapat menemukan metode yang paling efisien, untuk membuat program yang diperlukan. Sambil memastikan bahwa itu aman, terukur, dan mudah dirawat.
+Full-Stack Web Developer
+Jika Anda mencari jawaban cepat dan sederhana, untuk pertanyaan; “Apa itu web developer?”, Maka ‘full-stack’, mungkin adalah hal terdekat yang akan Anda dapatkan.
+Full-stack web developer, memahami strategi dan proses depan dan belakang sebuah website.
+Artinya bahwa, web developer, diposisikan secara penuh. Mengawasi dan mengerjakan seluruh proses. Agar website berfungsi dengan sempurna. Sehingga, tercapainya tujuan dari pembuatan website itu sendiri.
+Dalam kasus website kecil, yang tidak memiliki anggaran pengembangan besar, Full Stack development, pilihan baik untuk dipekerjakan, dalam membangun seluruh website. Termasuk pengelolaan dimasa depannya.
+Dalam hal ini, sangat penting bagi full-stack web development, untuk memiliki pemahaman yang lengkap dan mendalam. Tentang front-end dan back-and, untuk kebutuhan websitenya.
+Developed Website
+Setelah website selesai dibuat, berfungsi sempurna, itu bukan berarti pekerjaan sudah selesai. Website perlu perawata. Update mengikuti trend pasar. Dan strategi untuk menjangkau tujuan. Dan ini, masih menjadi bagian dari tugas-tugas full-stack web developer. Seharusnya. Walau pun terlihat seolah bagian lain.
+Dengan kemajuan tehnologi, membuat website saat ini begitu mudah. Bahkan hanya dengan beberapa click, website sudah dapat tampil dan online di internet.
+Pekerjaan back-end dan front-end, saat ini telah dimudahkan dengan berbagai aplikasi. Ini memungkinkan, para awam, bahkan dapat membuat website. Dan menjadikan online.
+Penyedia layanan web hosting, telah melengkapi layanan paket, seperti sistem control panel dan aplikasi berbasis CMS. Untuk mengaplikasikan bentuk website. Disisi lain, widget/plugin untuk mengatur layout/tata letak website, telah dimudahkan dengan adanya pagebuilder.
+Namun, pekerjaan pengembangan, tidak selesai disana. Perlu strategi, ide, gagasan, dan langkah-langkah tepat, untuk membuat website mudah ditemukan di search enggine. Belum lagi, soal sistem marketing. Dan lain sebagainya.
+Manfaat, Jika Anda Mampu Sebagai Full Stack Web Developer;
+Anda akan mendapatkan hasil akhir, yang sempurna. Untuk dapat membuat seluruh website. Ini membuat Anda lebih mudah dipekerjakan. Meningkatkan keamanan kerja Anda di masa depan.
+Sebagai full-stack developer, Anda akan memahami koneksi, antara bagian depan dan bagian belakang website. Memungkinkan Anda membuat program yang efisien dan efektif. Untuk semua bagian website.
+Full-stack developer, sering kali dipekerjakan untuk mengawasi proyek-proyek besar perusahaan. Khususnya dalam pengembangan web besar. Posisi seperti ini, cenderung dibayar lebih dari posisi web developer standar. Full-stack mendefinisikan apa itu web developer.
+Meskipun sebagian besar pengembang, memulai dengan spesialisasi depan atau belakang, ada banyak alasan, mengapa Anda harus mempertimbangkan, mempelajari keduanya. Ini akan membuat Anda lebih fleksible.
+Bagaimana Menjadi Web Developer?
+Tadi sudah mulai terjawab, “Apa itu web developer?”. Sekarang, saatnya untuk mulai mencari cara untuk menjadi web developer.
+Sementara, banyak orang melakukan penelitian, memutuskan untuk belajar bahasa pemrograman, dan belajar mengembangkan web. Sebagian besar dari mereka, gagal karena kurangnya arah yang jelas.
+Jika Anda serius membangun karier untuk diri sendiri, sebagai pengembang web berpengalaman, maka Anda perlu memastikan bahwa, Anda mulai dengan visi yang jelas. Rentang bagaimana Anda akan mencapainya. Langkah-langkah berikut akan membantu memandu Anda:
+Mulailah dengan memutuskan jenis pengembang yang Anda inginkan. Bahasa dan teknik yang Anda pelajari, akan bergantung pada, apakah Anda ingin fokus pada pengembangan depan atau belakang, untuk memulai.
+Selanjutnya, Anda perlu memilih kursus, atau beberapa kursus, yang akan mengajarkan Anda dasar-dasar pengembangan web. Termasuk kursus Coding Interaktif, untuk Pemula. mengenal CSS, HTML, dan mekanisme pengembangan web.
+Setiap orang membutuhkan sedikit motivasi dari waktu ke waktu, jika tidak, maka tidak melakukan hal-hal yang dibutuhkan. Saat Anda memulai perjalanan untuk memahami apa yang dimaksud dengan web developer, Anda harus mulai membuat sedikit jadwal pembelajaran. Sisihkan jumlah jam tertentu, per minggu, untuk kursus Anda, dan pastikan bahwa Anda menetapkan sendiri tujuan yang realistis.
+Seperti yang Anda lihat, tidak sulit untuk menjadi pengembang web. Tentu, ini akan membutuhkan banyak waktu, tenaga, dan kerja, tetapi Anda bisa melakukannya, jika mau. Setelah Anda sampai pada pemahaman yang jelas tentang ‘apa itu web developer’ dan ‘apa yang dilakukan web developer’, itu membuatnya menjadi lebih mudah.
+Web Design VS Web Developer
+Sekarang, kita perlu ngelantur sejenak. Untuk membahas, poin penting yang sering muncul. Ketika orang mulai berbicara tentang web developer. Web Design vs Web Developer. Apakah mereka berbeda? Atau mereka sama?
+Jawabannya adalah tidak!. Web Design dan Web Developmet tidak sama. Tetapi tentu saja, itu tergantung. Bagaimana Anda mendefinisikan ‘desain’ dan ‘pengembangan’.
+Disini, asumsinya bahwa, dibutuhkan pengetahuan yang berbeda. Untuk memahami apa itu desainer web, dan apa yang dimaksud pengembang web. Profesi ini berbeda dan mereka memiliki peran sebagai berikut:
+Web Design:
+Bertugas sebagai, perancang web. Terdiri dari orang atau sekelompok orang, yang bertanggung jawab atas pembuatan konsep website. Mereka mungkin memutuskan bahwa, itu perlu warna tertentu, dengan konten dan halaman tertentu.
+Web Design dapat melakukan hal-hal seperti, membuat infografis, logo, dan video. Dan, mereka memberi tahu pengembang, di mana hal-hal ini harus diletakkan di halaman web. Namun, mereka tidak ikut serta dalam pembangunan website atau kode yang mendasarinya.
+Web Developer:
+Pengembang web, mengerjakan konsep perancang. Dan membuat kode yang digunakan untuk mengubahnya menjadi website. Dan, membuatnya menjadi online. Dapat dilihat oleh orang-orang, seperti Anda dan saya.
+Penting untuk disadari bahwa, meskipun web developer dan perancang mungkin orang yang sama. Hampir selalu ada tumpang tindih, antara desain dan pengembangan front-end. Perannya berbeda.
+Jika Anda ingin menjadi seorang desainer, Anda tidak perlu harus belajar kode apa pun. Demikian juga, pengembang, tidak perlu memiliki keahlian desain grafis sama sekali. Dari sini, dapat disimpulkan bahwa ‘mendesain website’ bukan bagian dari jawaban untuk ‘Apa itu web developer?’.
+Bahasa Populer Yang Sering Digunakan Web Developer
+Sekarang, sangat penting untuk menyadari bahwa, ada berbagai bahasa yang berbeda. Yang digunakan untuk web development. Seperti disebutkan di atas, pengembang depan dan belakang, harus belajar bahasa yang berbeda. Sementara, pengembang penuh (full-stack), membutuhkan pengetahuan tentang semua bahasa pengembangan web
+Dengan mengingat hal ini, berikut ini daftar beberapa bahasa yang paling umum untuk dipelajari web developer, sekaligus penjelasan, tentang apa yang digunakan. Dan bagaimana Anda dapat mempelajarinya.
+HTML
+HTML adalah bahasa yang penting. Jika Anda ingin memahami apa itu web developer dan bagaimana menjadi yang terdepan.
+Untuk menjelaskan sepenuhnya, saya ingin Anda melakukan sesuatu untuk saya:
+Klik kanan pada jendela browser Anda, dan pilih; ‘view page source” (lihat sumber halaman).
+Anda akan dibawa ke tab baru. Yang berisi semua informasi. termasuk ke pembuatan halaman web. Apa yang Anda lihat, itu adalah serangkaian coder HTML. Ini memberitahu konten apa yang website ditampilkan. Dan sampai batas tertentu, bagaimana cara menampilkannya.
+Di bagian atas halaman, pada baris pertama, Anda akan melihat perintah . Ini memberi tahu browser web Anda, untuk mengimplemtasi kode HTML. Menjadi bentuk yang dapat user pahamai. Berupa visual, suara, hingga teks.
+Jika Anda menjelajah lebih jauh, Anda akan mulai mengenali hal-hal yang ada di halaman. Anda akan melihat beberapa perintah, seperti ‘tautan’, ‘gambar’, atau ‘video’.
+Ini semua adalah perintah konten, yang memberi tahu browser Anda, apa yang harus ditampilkan, dari mana mendapatkan konten, dan cara menampilkannya.
+HTML adalah bahasa yang sangat mudah dipelajari, dan biasanya, yang pertama dipelajari oleh programmer baru. Jika Anda tertarik menjelajahi HTML, melihat lebih dalam tentang apa itu web developer, dan pengembangan web front-end, pertimbangkan untuk mendaftar di HTML Coding for Beginners Course atau Tutorial Comprehensive HTML5
+CSS
+CSS adalah yang kedua dari bahasa front-end yang penting. Dan juga merupakan bahasa yang harus dipahami oleh setiap pengembang front-end.
+Kode CSS digunakan bersama dengan HTML. Sementara HTML memberi tahu laman web, konten apa yang akan ditampilkan, CSS memberi tahu laman web, cara menampilkan konten. Itu biasanya disebut bahasa ‘gaya’ – (style sheet).
+Setelah mempelajari CSS, Anda akan dapat melakukan berbagai hal, termasuk:
+Mengubah warna. CSS memungkinkan Anda untuk mengubah, hampir semua warna dari teks.
+Mengubah font. CSS juga memungkinkan Anda memilih font yang akan digunakan di website. Dan di mana Anda akan menggunakannya.
+Elemen layout/posisi. Salah satu elemen kunci dari apa yang mampu dilakukan oleh pengembang web, adalah mengatur semua yang Anda lihat di situs web. HTML memungkinkan Anda menambahkan gambar dan video ke halaman web, sementara, CSS memungkinkan Anda memberi tahu browser seberapa besar dan bagaimana website ditampilkan.
+Mengubah ukuran teks. Apakah Anda membangun situs yang dirancang untuk orang-orang, dengan penglihatan yang buruk? Jika demikian, Anda harus menggunakan pengetahuan Anda, tentang pengkodean CSS. Untuk membuat teks Anda lebih besar.
+Seperti yang Anda lihat, CSS memainkan peran besar bagi web developer. Terutama bagi pengembang front-end.
+JavaScript
+Apa yang dilakukan web developer? Sebagian besar, menggunakan bahasa pemrograman. Seperti Java atau HTML. Dan menggunakannya, untuk membuat komponen website. Pengembang JavaScript tidak berbeda, kecuali mereka membuat konten yang sangat spesifik.
+Sebagian besar pengembang JavaScript, bekerja di bagian depan website. Mereka membuat potongan kecil kode JavaScript, ini memungkinkan website Anda responsif, interaktif, dan menarik bagi pengunjung Anda.
+Cuplikan JavaScript ini sering disematkan dalam kode sumber HTML untuk webiste.
+PHP
+Secara historis, PHP telah mendominasi definisi tentang apa itu pengembang web. Dikenal sebagai bahasa internet, saat ini digunakan dalam beberapa bentuk di lebih dari 80% situs web yang ada. Meskipun perlahan-lahan menurun popularitasnya, PHP masih merupakan bahasa yang bagus untuk dipelajari oleh pengembang web back-end.
+PHP sangat mudah dipelajari dan cukup mudah digunakan, yang membuatnya sangat populer untuk pengembang back-end pemula. Ini sangat populer di situs web kecil yang dibangun di atas platform seperti WordPress atau Wix, dan ada banyak peluang kerja freelance untuk pengembang PHP.
+Jika ini menarik minat Anda, pertimbangkan untuk mengambil kursus PHP online. Perhatikan bahwa sangat penting untuk mengambil kursus yang terkini, seperti yang ditawarkan oleh BitDegree, karena versi bahasa yang lebih lama sangat berbeda dari versi modern (PHP7).
+BitDegree menawarkan dua kursus PHP utama: tutorial Belajar PHP Online dan kursus Menjadi Spesialis PHP. Lihatlah kedua hal ini dan pilih salah satu yang menurut Anda paling relevan dengan jalur karier yang Anda inginkan.
+Java
+Bahasa terakhir, adalah Java. Java telah elah menjadi bagian utama dari apa yang disebut pengembang web selama bertahun-tahun. Ini adalah bahasa lama dan populer. Untuk berbagai penggunaan pemrograman yang berbeda.
+Dari sisi pengembangan web, Java digunakan untuk membuat aplikasi web yang responsif dan dapat diskalakan. Biasanya, digunakan untuk desain website yang responsif dan cepat.
+Java adalah bahasa yang penting bagi banyak pengembang back-end. Ini cukup mudah dipelajari, yang membuatnya ramah bagi pemula, dan sangat mudah digunakan. Ini bahasa yang super scalable. Sehingga,, membuatnya populer bagit website besar. Seperti eBay dan Amazon. Dan sangat mudah dikelola.
+Kesimpulan
+Semoga setelah membaca artikel ini, Anda bisa menjawab pertanyaan. “Apa itu web developer?”
+Web Developer adalah seseorang yang membuat kode yang membangun wesbtie. Dan memberi tahu peramban internet, seperti Chrome, Internet Explorer, dan Safari. Dalam cara menampilkan website. Sehingga dapat dimengerti oleh manusia.
+Jika Anda ingin menjadi web developer, Anda harus memilih antara pengembangan front-end, back-end, dan full-stack. Anda perlu mempelajari bahasa yang relevan, dan Anda perlu berlatih membangun website dan aplikasi yang menjalankannya.
