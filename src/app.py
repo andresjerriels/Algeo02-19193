@@ -107,7 +107,6 @@ def search_query():
                 step1_Y = case_folding(text)
                 stemmed_Y = stemming(step1_Y)
                 tokenized_Y = tokenize(stemmed_Y)
-                textlist = list(tokenize(stemmed_Y))
 
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
@@ -128,7 +127,6 @@ def search_query():
         return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader, query=query)
     else:
         return redirect('/')
-
 
 if __name__ == "__main__":
     app.run(debug=True)
