@@ -13,7 +13,7 @@ Program ini merupakan search engine dengan query berupa kalimat dalam bahasa Ind
 Program ini ditulis dalam bahasa python. Untuk menjalankannya, silahkan install python terlebih dahulu di [sini](https://www.python.org/downloads/)
 
 ## Before you start
-Sebelum memulai program pastikan anda sudah memiliki pip pada python. Pip dapat diinstall dengan menjalankan perintah `sudo apt install python3-pip` pada terminal.
+Sebelum memulai program pastikan anda sudah memiliki pip pada python. Instruksi untuk instalasi pip dapat dilihat di [sini](https://www.geeksforgeeks.org/download-and-install-pip-latest-version/)
 
 Kemudian pastikan anda sudah memiliki library berikut:
 * flask
@@ -34,8 +34,12 @@ Khusus untuk library nltk, silahkan menjalankan python pada terminal, lalu tulis
 
 `nltk.download()`
 
+Sebelum menjalankan program, pastikan database untuk menyimpan dokumen sudah dibuat dengan menjalankan perintah pada terminal:
+* `python generatedb.py` (untuk sistem operasi Windows dan Linux)
+* `python3 generatedb.py` (untuk sistem operasi MacOS)
+
 ## Inspiration
-Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari zebuah [website](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online.
+Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari sebuah [website](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online.
 
 ## Contact
 Program ini dibuat oleh:
