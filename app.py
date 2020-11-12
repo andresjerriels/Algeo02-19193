@@ -125,7 +125,7 @@ def search_query():
         for word in querycol: # menambah kolom pertama: kata2 unik pada query
             tftable[i] = [word] + tftable[i]
             i += 1
-        return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader)
+        return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader, query=query)
     else:
         return redirect('/')
 
