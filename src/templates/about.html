@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}" type="text/css">
+<title>About Us</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="files">
+    <h1>Welcome to Doremi Search Engine</h1>
+</div>
+
+<div>
+    <h2>Basic Concepts</h2>
+    <p class="kiri">Konsep dasar <i>search engine </i> yang kami buat adalah dengan menggunakan rumus <i>cosine similarity </i> yang dapat menentukan 
+        kemiripan antara dokumen dalam database dengan <i>query </i> yang diinput. Setiap kata berbeda dipecah menjadi basis dari vektor <i>query </i> 
+        dan setiap dokumen. Nilai kemiripan ini akan diurutkan dari besar ke kecil yang menunjukkan relevansi antara dokumen dengan <i>query</i>.
+     Dokumen-dokumen sebagai tempat pencarian diupload dan disimpan dalam sebuah <i>database </i> dan sebuah folder, yang dapat diakses saat 
+    pencarian dilakukan. Sebagai hasil, akan ditampilkan urutan dokumen berdasarkan tingkat kemiripan, serta sebuah tabel berisikan jumlah kata 
+pada setiap dokumen yang sesuai dengan <i>query</i>.</p>
+    <br>
+    <h2>How to use</h2>
+    <p class="kiri">1. Upload dokumen sebagai sumber pencarian dengan menekan tombol "<i>choose files</i>"</p>
+    <p class="kiri">2. Masukkan <i>query</i> pada kolom pencarian, kemudian tekan tombol "cari" </p>
+    <p class="kiri">3. Hasil pencarian akan ditampilkan pada layar anda</p>
+    <br>
+</div>
+<div class="profile">
+    <h2>Get to know us via LinkedIn</h2>
+    <a href="https://www.linkedin.com/in/andresjerriels/" target="_blank">Andres Jerriel Sinabutar</a>
+    <br>
+    <a>NIM: 13519218</a>
+    <br>
+    <br>
+    <a href="https://www.linkedin.com/in/rafidika/" target="_blank">Rafidika Samekto</a>
+    <br>
+    <a>NIM: 13519207</a>
+    <br>
+    <br>
+    <a href="https://www.linkedin.com/in/ryorichardo/" target="_blank">Ryo Richardo</a>
+    <br>
+    <a>NIM: 13519193</a>
+    <br>
+    <br>
+    <br>
+</div>
+
+<footer>
+    <a href="/">Kembali ke menu utama</a>
+</footer>
+
+{% endblock %}

@@ -1,9 +1,11 @@
 import os
+import requests
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 
 UPLOAD_FOLDER = './uploads'
@@ -32,8 +34,32 @@ def upload_file():
     if request.method == 'POST':
         # check if the post request has the file part
         if 'files[]' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
+            try:
+                url = request.form['url']
+                r = requests.get(url)
+            except:
+                return 'There was an issue uploading your files'
+
+            if r:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                raw = soup.get_text()
+                filename = soup.title.string
+                filename = filename.partition('-')[0]
+                filename = filename.replace(" ", "")
+                filename = filename + ".txt"
+
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), "w") as text_file:
+                    text_file.write(raw)
+
+                new_file = Documents(name=filename)
+                try:
+                    db.session.add(new_file)
+                    db.session.commit()
+                except:
+                    return 'There was an issue uploading your files'
+
+            return redirect('/')
+
         files = request.files.getlist('files[]')
 
         for file in files:
@@ -48,10 +74,13 @@ def upload_file():
                     return 'There was an issue uploading your files'
         
         return redirect('/')
-        
+
     else:
         filenames = Documents.query.order_by(Documents.date_uploaded).all()
         return render_template('home.html', filenames=filenames)
+
+
+
 
 @app.route('/delete/<string:name>')
 def delete_file(name):
@@ -111,7 +140,7 @@ def search_query():
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
                 cos *= 100 # ubah ke persen
-                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
+                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': "{:.2f}".format(round(cos, 2))}
                 array.append(elmt) # nambah element ke array
 
                 tableheader.append(name)
@@ -127,6 +156,10 @@ def search_query():
         return render_template('home.html', array=array, filenames=filenames, tftable=tftable, tableheader=tableheader, query=query)
     else:
         return redirect('/')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
