@@ -1,32 +1,31 @@
 {% extends 'base.html' %}
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}" type="text/css">
-<title>Search Engine</title>
+<title>Doremi Search Engine</title>
 {% endblock %}
 
 {% block body %}
 
 <div class="files">
     <h1>Welcome to Doremi Search Engine</h1>
-    <p>Upload Dokumen Disini! (File harus bertipe txt)</p>
     {% if filenames|length < 1 %}
-    <p>There are no files. Upload one below!</p>
+    <p>Belum ada dokumen. Silahkan unggah di bawah ini.</p>
     {% else %}
     <p>Daftar Dokumen</p>
     <table>
         <tr>
-            <th>File</th>
-            <th>Uploaded</th>
-            <th>Actions</th>
+            <th>Dokumen</th>
+            <th>Diunggah</th>
+            <th>Aksi</th>
         </tr>
         {% for filename in filenames %}
             <tr>
                 <td>{{ filename.name }}</td>
                 <td>{{ filename.date_uploaded.date() }}</td>
                 <td>
-                    <a href="/delete/{{ filename.name }}">Delete</a>
+                    <a href="/delete/{{ filename.name }}">Hapus</a>
                     <br>
-                    <a href="/uploads/{{ filename.name }}">Open</a>
+                    <a href="/uploads/{{ filename.name }}">Buka</a>
                 </td>
             </tr>
         {% endfor %}
@@ -34,20 +33,20 @@
     {% endif %}
 
     <div id="submitfiles">
-        <br>
+        <p>Unggah Dokumen Disini! (Dokumen harus bertipe txt dan nama dokumen tidak boleh sama dengan yang sudah ada)</p>
         <form method=post enctype=multipart/form-data>
             <input id="inp" type=file name="files[]" multiple="true" accept=".txt">
             <br>
             <br>
-            <input type=submit value=Upload class="button">
+            <input type=submit value=Unggah class="button">
         </form>
     </div>
 </div>
-<br>
+
 <div class="form">
     <form action="/search" method="POST">
         <p>Cari Dokumen Disini!</p>
-        <input type="text" name="query" value="{{ query }}" placeholder="Masukkan kata yang ingin dicari" id="searchbar" required>
+        <input type="text" name="query" value="{{ query }}" placeholder="    Masukkan kueri" id="searchbar" required>
         <br>
         <input type="submit" value="Cari!" class="button">
     </form>
@@ -55,7 +54,7 @@
 
 <div class="hasil">
     {% if tftable|length > 0 %}
-    <p id="hasilpencarian">Hasil Pencarian</p>
+    <h2 id="hasilpencarian">Hasil Pencarian</h2>
     {% endif %}
     {% for element in array %}
     <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
@@ -90,8 +89,7 @@
     {% endif %}
 </div>
 
-<div class="file">
-    <p><a href="/src/templates/perihal.html">Perihal</a></p>
-</div>
-
+<footer>
+    <a href="">Tentang</a>
+</footer>
 {% endblock %}
