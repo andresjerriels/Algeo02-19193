@@ -1,6 +1,6 @@
 * {
     font-family: "Amatic SC", cursive;
-    background-color: white;
+    background-image: url('amongus-background.jpg');
 }
 
 h1 {
@@ -9,4 +9,51 @@ h1 {
     color: white;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+}
+
+a, p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    margin-top: 5rem;
+    color: white;
+}
+
+.hasil, .files {
+    margin: 3rem auto;
+}
+
+table, th, td {
+    border: 0.5rem solid white;
+    border-radius: 3rem;
+}
+
+#searchbar {
+    border: 0.25rem solid white;
+    background-color: black;
+    color: white;
+    width: 35rem;
+    height: 4rem;
+    border-radius: 4rem;
+    display: block;
+    margin: 0 auto;
+    font-size: 2.5rem;
+}
+
+.button {
+    width: 8rem;
+    font-size: 1.75rem;
+    height: 3rem;
+    color: white;
+    background-color: #679BF1;
+    border: 0.25rem solid white;
+    border-radius: 3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.button:hover {
+    background-color: white;
+    color: red;
+    border-color: cyan;
 }

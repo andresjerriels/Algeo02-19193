@@ -13,7 +13,7 @@
     {% if filenames|length < 1 %}
     <p>There are no files. Upload one below!</p>
     {% else %}
-    <h3>Daftar Dokumen</h3>
+    <p>Daftar Dokumen</p>
     <table>
         <tr>
             <th>File</th>
@@ -36,19 +36,22 @@
 
     <form method=post enctype=multipart/form-data>
         <input type=file name=file multiple accept=".txt">
-        <input type=submit value=Upload>
+        <br>
+        <input type=submit value=Upload class="button">
     </form>
 </div>
 <br>
 <div class="form">
     <form action="/search" method="POST">
-        <input type="text" name="query">
-        <input type="submit" value="Search!">
+        <p>Cari Dokumen Disini!</p>
+        <input type="text" name="query" value="Search in Documents" id="searchbar" required>
+        <br>
+        <input type="submit" value="Search!" class="button">
     </form>
 </div>
 
-<div>
-    <h2>Hasil Pencarian</h2>
+<div class="hasil">
+    <p>Hasil Pencarian</p>
     {% for element in array %}
     <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
     <p>Jumlah kata: {{ element.get('count') }}</p>
