@@ -23,13 +23,17 @@ a, p {
     margin: 3rem auto;
 }
 
-table, th, td {
-    border: 0.5rem solid white;
-    border-radius: 3rem;
+table {
+    margin: 0 auto;
 }
 
 th, td {
+    font-size: 2rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
     color: white;
+    margin: 0 auto;
+    text-align: center;
 }
 
 form {
@@ -40,6 +44,12 @@ form {
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+#inp {
+    margin: 0 auto;
+    color: white;
+    font-size: 1rem;
 }
 
 #searchbar {

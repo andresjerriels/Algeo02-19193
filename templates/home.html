@@ -33,19 +33,23 @@
     </table>
     {% endif %}
 
-    <form method=post enctype=multipart/form-data>
-        <input type=file name=file multiple accept=".txt" id="submitfiles">
+    <div id="submitfiles">
         <br>
-        <input type=submit value=Upload class="button">
-    </form>
+        <form method=post enctype=multipart/form-data>
+            <input id="inp" type=file name="files[]" multiple="true" accept=".txt">
+            <br>
+            <br>
+            <input type=submit value=Upload class="button">
+        </form>
+    </div>
 </div>
 <br>
 <div class="form">
     <form action="/search" method="POST">
         <p>Cari Dokumen Disini!</p>
-        <input type="text" name="query" value="Search in Documents" id="searchbar" required>
+        <input type="text" name="query" placeholder="Masukkan kata yang ingin dicari" id="searchbar" required>
         <br>
-        <input type="submit" value="Search!" class="button">
+        <input type="submit" value="Cari!" class="button">
     </form>
 </div>
 

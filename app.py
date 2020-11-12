@@ -10,6 +10,7 @@ UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
+app.secret_key = "algeo"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 
@@ -30,25 +31,24 @@ def allowed_file(filename):
 def upload_file():
     if request.method == 'POST':
         # check if the post request has the file part
-        if 'file' not in request.files:
+        if 'files[]' not in request.files:
             flash('No file part')
             return redirect(request.url)
-        file = request.files['file']
-        # if user does not select file, browser also
-        # submit an empty part without filename
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            new_file = Documents(name=filename)
-            try:
-                db.session.add(new_file)
-                db.session.commit()
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                return redirect('/')
-            except:
-                return 'There was an issue uploading your file'
+        files = request.files.getlist('files[]')
+
+        for file in files:
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                new_file = Documents(name=filename)
+                try:
+                    db.session.add(new_file)
+                    db.session.commit()
+                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                except:
+                    return 'There was an issue uploading your files'
+        
+        return redirect('/')
+        
     else:
         filenames = Documents.query.order_by(Documents.date_uploaded).all()
         return render_template('home.html', filenames=filenames)
