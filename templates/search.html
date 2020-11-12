@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block head %}
-<title>Search Engine</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/search.css') }}" type="text/css">
+<title>Search Result</title>
 {% endblock %}
 
 {% block body %}
@@ -31,15 +32,18 @@
     {% endif %}
 
     <form method=post enctype=multipart/form-data>
-        <input type=file name=file>
-        <input type=submit value=Upload>
+        <input type=file name=file multiple accept=".txt" id="submitfiles">
+        <br>
+        <input type=submit value=Upload class="button">
     </form>
 </div>
 <br>
 <div class="form">
     <form action="/search" method="POST">
-        <input type="text" name="query">
-        <input type="submit" value="Search!">
+        <p>Cari Dokumen Disini!</p>
+        <input type="text" name="query" value="Search in Documents" id="searchbar" required>
+        <br>
+        <input type="submit" value="Search!" class="button">
     </form>
 </div>
 

@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block head %}
-<link href="{{ url_for('static', filename='/css/redsus.png') }}" rel="shortcut icon">
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}" type="text/css">
 <title>Search Engine</title>
 {% endblock %}
@@ -35,7 +34,7 @@
     {% endif %}
 
     <form method=post enctype=multipart/form-data>
-        <input type=file name=file multiple accept=".txt">
+        <input type=file name=file multiple accept=".txt" id="submitfiles">
         <br>
         <input type=submit value=Upload class="button">
     </form>
