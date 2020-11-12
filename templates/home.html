@@ -47,7 +47,7 @@
 <div class="form">
     <form action="/search" method="POST">
         <p>Cari Dokumen Disini!</p>
-        <input type="text" name="query" placeholder="Masukkan kata yang ingin dicari" id="searchbar" required>
+        <input type="text" name="query" value="{{ query }}" placeholder="Masukkan kata yang ingin dicari" id="searchbar" required>
         <br>
         <input type="submit" value="Cari!" class="button">
     </form>
