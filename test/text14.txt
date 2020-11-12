@@ -1,0 +1,168 @@
+Rekayasa perangkat lunak (RPL, atau dalam bahasa Inggris: Software Engineering atau SE) adalah satu bidang profesi yang mendalami cara-cara pengembangan perangkat lunak termasuk pembuatan, pemeliharaan, manajemen organisasi pengembanganan perangkat lunak dan manajemen kualitas.
+IEEE Computer Society mendefinisikan rekayasa perangkat lunak sebagai penerapan suatu pendekatan yang sistematis, disiplin dan terkuantifikasi atas pengembangan, penggunaan dan pemeliharaan perangkat lunak, serta studi atas pendekatan-pendekatan ini, yaitu penerapan pendekatan engineering atas perangkat lunak.
+Rekayasa perangkat lunak adalah pengubahan perangkat lunak itu sendiri guna mengembangkan, memelihara, dan membangun kembali dengan menggunakan prinsip reakayasa untuk menghasilkan perangkat lunak yang dapat bekerja lebih efisien dan efektif untuk pengguna.
+Kriteria yang dapat digunakan sebagai acuan dalam merekayasa perangkat lunak:
+Dapat terus dirawat dan dipelihara(maintainability)
+Dapat mengikuti perkembangan teknologi (dependability)
+Dapat mengikuti keinginan pengguna (robust)
+Efektif dan efisien dalam menggunakan energi dan penggunaannya
+Dapat memenuhi kebutuhan yang diinginkan (usability)
+Karakteristik dan Atribut Perangkat Luna
+Software merupakan elemen sistem logik dan bukan elemen sistem fisik seperti hardware.
+Elemen itu tidak aus, tetapi bisa rusak.
+Elemen software itu direkayasa atau dikembangkan dan bukan dibuat di pabrik seperti hardware
+Software itu tidak bisa dirakit.
+Atribut perangkat lunak :
+Dapat dipelihara : Perangkat lunak dapat ditulis sedemikian rupa sehingga perangkat lunak dapat berubah seiring dengan perubahan kebutuhan pelanggan.
+Dapat diandalkan : Perangkat lunak mempunyai serangkaian karakteristik, termasuk keandalan, keamanan dan keselamatan.
+Efisien : Perangkat lunak tidak boleh menggunakan sumber daya sistem seperti siklus memori dan prosesor.
+Kemampupakaian : Perangkat lunak harus dapat dipakai, memiliki interface user yang bagus dan dokumentasi yang mencukupi.
+Tujuan dari RPL
+Menghasilkan sebuah perangkat lunak yang berkualitas. Yang dimaksud dengan berkualitas dapat dilihat dari tiga sisi, sisi sponsor (individu atau organisasi yang telah mengeluarkan biaya dalam pembangunan perangkat lunak), sisi pemakai (siapapun yang menggunakan perangkat lunak tersebut), sisi maintainer / modifier (yang memelihara dan memodifikasi perangkat lunak tersebut).
+Tujuan kedua dari RPL adalah menghasilkan perangkat lunak dengan biaya yang efisien.
+Sedangkan tujuan ketiga dari RPL adalah menghasilkan perangkat lunak tepat pada waktunya.
+Jenis-jenis Perangkat Lunak
+Dilihat dari sudut pandang fungsinya, perangkat lunak dapat dikelompokkan menjadi :
+Perangkat lunak sistem
+Perangkat lunak yang kegunaannya lebih banyak ditujukan untuk operasional komputer.
+Sistem operasi
+Penerjemah bahasa pemrograman (compiler/interpreter)
+Perangkat lunak aplikasi
+Perangkat lunak yang kegunaannya lebih banyak ditujukan untuk membantu menyelesaikan masalalah-masalah yang dihadapi oleh pemakai.
+Program paket yang sudah jadi
+Program aplikasi buatan sendiri
+Sedangkan dilihat dari aplikasinya, perangkat lunak dibedakan menjadi 
+Perangkat Lunak Sistem (Sistem Software)
+Sekumpulan program yang ditulis untuk kepentingan program lain, contoh editor, driver dan lain-lain
+Perangkat Lunak Waktu Nyata (Real Time Software)
+Perangkat lunak yang digunakan untuk mengukur/menganalisis atau mengontrol proses pemasukan data dari lingkungan luar sampai menghasilkan laporan yang diinginkan
+Perangkat Lunak Bisnis (Business Software)
+Perangkat lunak yang memberikan fasilitas operasi untuk bisnis atau fasilitas pengambilan keputusan manajemen, contoh sistem akuntansi, inventory, payroll dan lain-lain
+Perangat Lunak Rekayasa dan Sains (Engineering and Scientific Software)
+Perangkat lunak yang digunakan di dalam bidang aplikasi teknik dan kerekayasaan perangkat lunak jenis ini biasanya berhubungan dengan komputasi data numerik, CAD (Computer Aided Design), simulasi sistem, dan lain-lain.
+Embedded Software
+Perangkat lunak yang digunakan untuk mengontrol suatu produk dan sistem dimana perangkat lunak tersebut disimpan. Biasanya ditempatkan di ROM, contoh Tombol di Microwave Oven
+Perangkat Lunak Komputer Pribadi (Personal Computer Software)
+Banyak digunakan pada aplikasi yang bersifat perorangan, contohnya: pengolah kata, spreadsheet, game, DBMS dan lain-lain.
+Perangkat Lunak Intelegensia Buatan (Artificial Intelligent Software)
+Dibuat dengan menggunakan teknik algoritma non-numerik untuk memecahkan masalah yang kompleks, digunakan dalam bidang aplikasi kecerdasan buatan, contohnya: game, expert sistem, neural network, Turbo Prolog, dan lain-lain.
+Model Proses Perangkat Lunak Evolusioner
+Model evolusioner adalah model iterative, ditandai dengan tingkah laku yang memungkinkan perekayasa perangkat lunak mengembangkan versi perangkat lunak yang lebih lengkap sedikit demi sedikit. Kebutuhan produk dan bisnis kadang-kadang berubah seiring dengan laju perkembanganya. Dalam situasi tersebut maupun lainya, perekayasa perangkat lunak membutuhkan sebuah model proses yang sudah dirancang secara eksplisit untuk mengakomodasi produk perkembangan sepanjang waktu. Model ini bukan termasuk rekayasa perangkat lunak klasik. Model evolusioner meliputi:
+Model pertambahan
+Model incremental menggabungkan elemen-elemen model sekuensial linier (diaplikasikan secara berulang) dengan filosofi prototype iterative. Model ini memakai urutan-urutan linier di dalam model yang membingungkan, seiring dengan laju waktu kalender. Setiap urutan linier menghasilkan pertambahan, perangkat lunak “yang bisa disampaikan.” Contoh, perangkat lunak pengolah kata yang dikembangkan dengan menggunakan paradigm pertambahan akan menyampaikan manajemen file, editing, serta fungsi penghasilan dokumen pada pertambahan pertama, dan selanjutnya. Pertambahan pertama dapat disebut sebagai produk inti (core product).
+Model ini berfokus pada penyampaian produk operasional dalam Setiap pertambahanya. Pertambahan awal ada di versi stripped down dari produk akhir, tetapi memberikan kemampuan untuk melayani pemakai dan juga menyediakan platform untuk evaluasi oleh pemakai.
+Perkembangan pertambahan, khususnya berguna pada staffing, tidak bisa dilakukan menggunakan implementasi lengkap oleh batas waktu bisnis yang sudah disepakati untuk proyek tersebut. jika produk inti diterima dengan baik, maka staf tambahan bisa ditambahkan untuk mengimplementasi pertambahan selanjutnya.
+Model spiral
+Awalnya diusulkan oleh Boehm (BOE88), adalah model proses perangkat lunak yang evolusioner, merangkai sifat iterative dari prototype dengan cara control dan aspek sistematis dari model sekuensial linier. Model yang berpotensi untuk pengembangan versi pertambahan perangkat lunak secara cepat. Model spiral dibagi menjadi sejumlah aktifitas kerangka kerja atau wilayah tugas, antara lain :
+Komunikasi pelanggan, tugas-tugas yang dibutuhkan untuk membangun komunikasi yang efektif diantara pengembang dan pelanggan.
+Perencanaan, tugas-tugas yang dibutuhkan untuk mendefinisikan sumber-sumber daya, ketepatan waktu, dan proyek informasi lain yang berhubungan.
+Analisis resiko, tugas-tugas yang dibutuhkan untuk menaksir resiko-resiko, baik manajemen maupun teknis.
+Perekayasaan, tugas-tugas yang dibutuhkan untuk membangun satu atau lebih representasi dari aplikasi tersebut.
+Konstruksi dan peluncuran, tugas-tugas yang dibutuhkan untuk mengkonstruksi, menguji, memasang (instal), dan memberikan pelayanan kepada pemakai (contohnya pelatihan dan dokumentasi).
+Evaluasi pelanggan, tugas-tugas untuk memperoleh umpan balik dari pelanggan dengan didasarkan pada evaluasi representasi perangkat lunak, yang dibuat selama masa perekayasaan, dan dimplementasikan selama masa pemasangan.
+Model spiral menjadi pendekatan yang realistis bagi perkembangan system dan perangkat lunak skala besar. Karena perangkat lunak terus bekerja  selama proses bergerak, pengembang dan pemakai memahami, dan bereaksi lebih baik terhadap resiko dari Setiap tingkat evolusi. Model spiral menggunakan prototype sebagai mekanisme pengurangan resiko.
+Model spiral membutuhkan keahlian penafsiran resiko yang masuk akal, dan sangat bertumpu pada keahlian ini untuk mencapai keberhasilan. Jika sebuah resiko tidak dapat ditemukan dan diatur, pasti akan terjadi masalah. Model ini membutuhkan waktu bertahun-tahun sampai kehandalannya bisa dipertimbangkan dengan kepastian absolute.
+Model rakitan komponen
+Model ini menggabungkan beberapa karakteristik model spiral. Bersifat evolusioner, sehingga membutuhkan pendekatan iterative untuk menciptakan perangkat lunak. Tetapi model ini merangkai aplikasi dari komponen perangkat lunak sebelum dipaketkan (kadang disebut kelas).
+Aktivitas perangkat lunak dimulai dengan  identifikasi calon kelas. Dipenuhi dengan mengamati data yang akan dimanipulasi oleh aplikasi dan algoritma-algoritma yang akan diaplikasikan. Data dan algoritma yang berhubungan dikemas ke dalam kelas. Kelas-kelas tersebut disimpan dalam class library (tempat penyimpanan).
+Model ini membawa pada penggunaan kembali perangkat lunak, dan kegunaan kembali itu memberi sejumlah keuntungan yang bisa diukur pada rekayasa perangkat lunak.
+Model perkembangan konkruen
+Representasi aktivitas dalam model ini, meliputi aktivitas analisis, bisa berada dalam salah satu dari keadaan-keadaan yang dicatat pada saat tertentu. Dengan cara yang sama, aktivitas yang lain (desain atau komunikasi pelanggan) dapat direpresentasikan dalam sebuah sikap yang analog. Semua aktifitas ada secara konkruen tetapi dia tinggal didalam keadaan yang berbeda. Model ini sering digunakan sebagai paradigm bagi pengembangan aplikasi klien/server.
+Kenyataanya model proses konkruen bisa diaplikasikan ke dalam semua tipe perkembangan perangkat lunak, dan memberikan gambaran akurat mengenai keadaan tertentu dari sebuah proyek. Selain membatasi ajtivitas perekayasa ke dalam sederetan kejadian, model proses juga mendefinisikan jaringan aktivitas.
+Manajemen Proyek Perangkat Lunak
+Ada 3 fokus manajemen proyek perangkat lunak (PL) :
+People (manusia)
+Mempertinggi kesiapan organisasi PL untuk mengerjakan aplikasi yang semakin kompleks.
+Problem (masalah)
+Objektifitas dan ruang lingkupnya harus ditetapkan, pemecahan alternatifnya harus dipertimbangkan, teknik dan batasanpun harus didefinisikan
+Process (proses)
+Memberikan suatu kerangka kerja dimana rencana komprehensif bagi pengembangan perangkat lunak.
+Manajemen Proyek Perangkat Lunak Adalah aktifitas dalam memanajemen rekayasa perangkat lunak, dimulai sebelum aktifitas teknis di inisialisasi dan berlanjut pada keseluruhan batasan, perkembangan dan pemeliharaan perangkat lunak komputer.
+Proses-Proses Dalam Manajemen Proyek
+Manajemen proyek merupakan lapisan pertama dalam proses rekayasa perangkat lunak skala besar. Untuk menuju pada proyek yang berhasil, perlu dimengerti tentang 
+Lingkup pekerjaan
+Resiko yang dapat ditimbulkan
+Sumber-sumber yang diperlukan
+Tugas yang harus dilaksanakan
+Patokan yang harus diikuti
+Usaha atau biaya yang dikeluarkan
+Dan Penjadwalan
+Awal Proyek Perangkat Lunak
+Untuk mengestimasi biaya, pembagian tugas, dan penjadwalan, sebelum sebuah proyek direncanakan perlu :
+Memastikan tujuan dan ruang lingkup
+Memperhatikan alternatif-alternatif solusi
+Identifikasi batasan teknik dan manajerial
+Pengukuran dan Satuan Ukuran
+Pengukuran dan satuan ukuran akan membantu untuk mengerti proses-proses dalam pengembangan produk dan produk itu sendiri. Proses dan produk diukur dalam usaha untuk meningkatkan kualitasnya.
+Estimasi
+Dalam aktifitas utama proyek yaitu perencanaan, dilakukan estimasi :
+Sunber daya manusia (ukuran orang/bulan)
+Jangka waktu kronologis (Ukuran waktu kalender)
+Biaya (Ukuran uang Rp)
+Analisis Resiko
+Analisis resiko sangat penting dalam manajemen proyek perangkat lunak. Beberapa hal yang harus diperhatikan berkaitan dengan resiko adalah ;
+Masa yang akan dating : resiko apa yang mempengaruhi trend (kecenderungan) proyek perangkat lunak
+Perubahan : Bagaimana perkembangan dunia mempengaruhi keawetan dan kesuksesan perangkat lunak
+Pilihan : metode apa yang dipakai, berapa orang diperlukan, seberapa tinggi kualitas perangkat lunak dan sebagainya
+Analisis resiko merupakan serangkaian langkah untuk menyiasati resiko, yaitu:
+Resiko proyek : masalah pembiayaan, penjadwalan, personil, sumber daya, pelanggan dan kebutuhan dikaitkan dengan akibatnya terhadap pelanggan.
+Resiko teknis : masalah desain, implementasi, antarmuka, verifikasi dan pemeliharaan.
+Resiko bisnis : termasuk di dalamnya adalah resiko pasar, resiko manajemen, dan resiko pembiayaan.
+Perkiraan resiko
+Memperhitungkan lebih lanjut estimasi resiko dalam bentuk : [ri, li, xi] dengan
+ri : resiko
+li : kemungkinan terjadinya
+xi : akibat dari resiko dengan memprioritaskan resiko dan memulai memikirkan cara mengendalikan dan atau mengurangi resiko yang mungkin terjadi
+Disebut juga estimasi resiko, adalah usaha untuk mengukur setiap resiko dengan 2 cara :
+Kemungkinan adanaya resiko
+Konsekuensi (masalah yang bisa timbul karena resiko)
+Ada 4 aktivitas estimasi resiko :
+Memastikan skala yang merefleksikan kemungkinan resiko
+Memperkirakan konsekuensi resiko
+Estimasi efek dari resiko pada proyek dan produk
+Menentukan akurasi keseluruhan dari proyeksi resiko
+Penjadwalan
+Langkah-langkah yang dilakukan dalam penjadwalan :
+Identifikasi sekumpulan tugas
+Pastikan keterkaitan antar tugas
+Estimasi usaha untuk tiap-tiap tugas
+Tentukan pekerja dan sumber-sumber lainnya
+Buat jaringan tugas
+Buat jadwal kerja berdasarkan waktu
+Penelusuran Dan Pengendalian
+Penelusuran dan pengendalian dilakukan setelah ada penjadwalan yang pasti, yaitu memeriksa apakah tugas telah dilaksanakan sesuai dengan jadwal.
+Satuan Ukuran Produktivitas Dan Kualitas Perangkat Lunak
+Pengukuran perangkat lunak dilakukan untuk :
+Indikasi kualitas produk
+Perkiraan produktivitas orang-orang yang menghasilkan produk
+Perkiraan manfaat dari penerapan metode dan tools
+Membentuk dasar dari estimasi
+Menegaskan (Justify) permintaan tools baru dan pelatihan
+Satuan ukuran perangkat lunak dikategorikan ke dalam :
+Satuan ukuran produktivitas : Output dari proses rekayasa
+Satuan ukuran kualitas : indikasi tingkat pemenuhan kebutuhan konsumen
+Satuan ukuran teknik : Karakteristik perangkat lunak
+Kategori lain untuk pengukuran :
+Pengukuran berorientasi besarnya (Ukuran) : Besarnya perangkat lunak = jumlah baris program Pengukuran berorientasi ukuran merupakan pengukuran langsung. Pengukuran berorientasi ukuran menggunakan tabel berisi data berorientasi ukuran yang merupakan daftar proyek pengembangan perangkat lunak yang telah diselesaikan dikaitkan dengan data berorientasi ukuran untuk proyek yang bersangkutan
+Pengukuran berorientasi fungsi : fungsi = ruang lingkup informasi dan tingkat kesulitannya Merupakan pengukuran tidak langsung, yang menitikberatkan pada fungsionalitas atau utilitas program. Disebut juga metode Function Point sesuai dengan informasi yang didefinisikan sebagai :
+Jumlah masukan dari pemakai
+Jumlah keluaran dari pemakai
+Jumlah penyelidikan dari pemakai
+Jumlah file
+Jumlah antarmuka eksternal
+Satuan Ukuran Kualitas Parangkat Lunak
+Kualitas perangkat lunak dihitung pada saat proses rekayasa perangkat lunak ataupun setelah diserahkan kepada pemakai. Satuan ukuran kualitas perangkat lunak pada saat proses rekayasa :
+Kompleksitas program
+Modularitas yang efektif
+Besarnya program
+Definisi pengukuran kualitas menurut Gilb:
+Kebenaran (Correctness) : Program harus bekerja dengan benar. Kebenaran merupakan tingkat perangkat lunak bekerja sesuai dengan fungsi yang dibutuhkan pengukuran yang umum adalah cacat (defect) /KLOC
+Perawatan (Maintainability) : Kemudahan perbaikan jika ada kesalahan, penyesuaian terhadap perubahan lingkungan atau peningkatan sesuai permintaan pemakai.
+Integritas (Integrity) : Pengukuran tingkat ketahanan perangkat lunak terhadap serangan (disengaja/tidak) pada program, data dan dokumen
+Kegunaan (Usability) : Berkaitan dengan kemudahan pemakaian yang diukur berdasarkan keahlian yang diperlukan untuk mempelajari sistem, waktu yang dibutuhkan untuk dapat menggunakan sistem, peningkatan produktivitas dengan penggunaan sistem dan perkiraan yang sifatnya subjektif pada kelakuan pemakai
+Menurut Basili dan Zelkowitz ada 5(lima) faktor yang mempengaruhi produktivitas perangkat lunak :
+Faktor manusia : jumlah dan tingkat keahlian tim
+Faktor masalah : tingkat kerumitan masalah yang harus dipecahkan
+Faktor proses : teknik analisis dan desain, bahasa dan tools
+Faktor produk : keandalan dan performansi sistem berbasis computer
+Faktor sumber daya : ketersediaan tools, sumber-sumber perangkat keras dan perangkat lunak

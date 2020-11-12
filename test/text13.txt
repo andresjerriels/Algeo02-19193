@@ -1,0 +1,61 @@
+Sistem Operasi atau biasa disingkat OS adalah system software yang melakukan kontrol manajemen perangkat keras dan fungsi dasar sistem di dalam komputer.
+OS juga bekerja untuk menjalankan perangkat lunak seperti aplikasi atau program yang terinstal di dalamnya. Melalui sistem operasi, sebuah komputer bisa dijalankan oleh manusia.
+Secara umum, sistem operasi adalah software pertama yang diinstal pada memori komputer setelah proses booting.
+Sementara program atau aplikasi lainnya baru bisa diinstal jika sistem operasi sudah terpasang. Layanan inti sebuah OS adalah memberi tampilan antar muka pengguna (user interface), memberikan akses ke disk, manajemen ruang penyimpanan serta penjadwalan tugas.
+Tanpa adanya sistem operasi, sebuah komputer hanya akan menyala tanpa bisa diberi perintah yang beragam.
+Misalnya Anda membeli sebuah laptop yang belum diinstal OS, hal yang bisa Anda lakukan hanyalah menghidupkan dan mematikan laptop saja.
+Sistem operasi memiliki fungsi inti dari sebuah komputer. Fungsi inti inilah yang akan mengintegrasikan seluruh sumber daya yang ada dalam komputer.
+Mulai dari hardware hingga software. Berikut akan dijelaskan beberapa poin tentang fungsi sistem operasi.
+1. Manajemen Sumber Daya Komputer
+Sistem operasi dapat mengatur waktu sebuah aplikasi yang dijalankan, membagi penggunaan CPU saat apliaksi berjalan bersamaan, memberi akses pada disk, dll.
+2. Tampilan Antar Muka (Interface)
+Memberikan tampilan antar muka yang mudah untuk dipahami. Sehingga Anda tidak perlu memasukkan perintah yang rumit untuk menjalankan hardware atau software di komputer.
+3. Koordinasi
+Sistem operasi akan mengatur seluruh kegiatan yang kompleks dari berbagai perangkat lunak di dalamnya agar berjalan sesuai dengan urutan yang tepat.
+OS juga mengatur setiap kegiatan yang berhubungan dengan perangkat keras yang terhubung.
+4. Pelindung File
+Sebuah file sistem yang mengalami kerusakan atau hilang, dapat dipastikan bahwa komputer tersebut tidak akan berjalan dengan baik.
+Begitu juga sebuah aplikasi, jika ada file yang error, aplikasi tersebut akan berjalan tidak normal. OS melindungi file-file tersebut dengan membatasi akses dan melakukan perubahan.
+5. Penerjemah
+Sistem operasi bisa dikatakan sebagai penghubung antara komputer dan manusia. Komputer beroperasi dengan bahasa pemrograman yang sangat rumit, OS hadir sebagai penerjemah sehingga pengguna dapat mengoperasikan komputer dengan mudah.
+Saat ini ada jenis sistem operasi yang di desain dan diperuntukkan untuk keperluan desktop dan untuk mobile seperti tablet dan smartphone.
+Sistem Operasi untuk Desktop:
+Berikut adalah jenis-jenis sistem operasi yang digunakan untuk perangkat komputer atau laptop:
+1. Microsoft DOS
+Ms DOS merupakan generasi pertama sistem operasi besutan Microsoft. OS ini banyak digunakan oleh komputer dari IBM-PC dan dirilis pada tahun 1981.
+User Interface dari sistem operasi ini masih berupa tulisan tanpa adanya gambar yang sekarang dikenal dengan istilah Command Prompt.
+2. Windows
+OS Windows adalah penerus dari Microsoft DOS dengan tampilan yang sudah memiliki gambar atau GUI (Graphical User Interface).
+Dengan adanya tampilan grafik tersebut, pengguna akan jauh lebih mudah dalam mengoperasikan komputer.
+3. Macintosh atau MAC OS
+Macintosh (MAC) adalah sistem operasi yang dibuat eksklusif hanya untuk perangkat Apple saja.
+Mulai dikembangkan pada tahun 1984 untuk proyek bernama LISA yang tidak lain adalah nama putri kandung pendiri Apple, Steve Jobs.
+Sama seperti windows, MAC juga telah mengeluarkan beberapa versi hingga saat ini.
+4. Linux
+Linux merupakan sistem operasi yang bersifat open source. Artinya, pengguna bebas untuk mengembangakn sistem operasi ini sesuai dengan kebutuhannya.
+Tentu hal ini menjadi favorit bagi para pengembang mandiri, karena dengan linux mereka bisa mengubah, menambah atau mengurangi sistem di dalamnya.
+5. UNIX
+Hampir sama dengan sistem operasi pada DOS, OS ini merupakan OS lawas. Memiliki beberapa versi yang sempat dirilis di publik secara gratis.
+OS ini juga terbilang cukup aman dan susah terkena virus. Meski begitu, UNIX sudah mulai ditinggalkan dan belum mampu menandingi kelebihan dari OS lainnya.
+Sistem Operasi untuk Mobile
+Untuk versi smartphone, berbagai sistem operasi pernah dirilis dan hanya beberapa yang masih bertahan hingga saat ini.
+1. Android
+Sistem operasi ini digunakan oleh sebagian besar smartphone yang ada di pasaran. Awalnya OS ini dikembangkan oleh perusahaan bernama Android Inc. yang akhirnya dibeli oleh Google.
+Ciri utama dari Android yaitu pemberian nama OS berupa camilan manis di setiap versi terbarunya. Sistem operasi ini merupakan pengembangan dari Linux.
+Android muncul dengan versi 1.0 tanpa adanya embel-embel nama makanan di belakangnya. Versi selanjutnya adalah 1.5 dan mulai menggunakan nama Cupcake sebaga nama versi.
+Hingga akhirnya yang teranyar adalah Android 10 (tahun 2019) yang sudah jauh berkembang dengan berbagai fitur di dalamnya.
+2. iOS
+Sebelum adanya android, Apple lebih dulu memperkenalkan sistem operasi untuk perangkat mobilenya bernama iOS.
+Jika Macintosh adalah OS untuk perangkat komputer milik Apple, iOS hadir khusus untuk perangkat mobile mereka seperti iPhone dan iPad. Perkembangan selanjutnya, OS ini juga dijalankan pada perangkat Apple TV.
+3. Symbian
+Anda pernah menggunakan ponsel genggam pada tahun sebelum maraknya HP berteknologi touchscreen, Anda pasti akan menjumpai nama-nama besar seperti Nokia, Sony Ericson dan Siemens.
+Merk-merk besar tersebut menggunakan sistem operasi symbian dalam perangkatnya. Namun, OS ini kian ditinggalkan setelah mucnulnya Android, iOS dan Windows Phone.
+4. Windows Phone
+Windows Phone atau yang sebelumnya disebut Windows Mobile merupakan sistem operasi yang dikembangkan Microsoft untuk dijalankan pada perangkat smartphone.
+Nokia sempat menggunakan OS ini, namun tidak terlalu berhasil karena dominasi Android dan iOS yang kian tak terbendung hingga kini.
+5. Blackberry OS
+Sama dengan Apple, Blackberry hadir cukup eksklusif dengan beberapa layanan dan juga sistem operasi milik mereka sendiri.
+Pada masanya, memang perangkat Blackberry adalah salah satu perangkat yang sangat populer. Bisa dikatakan menjadi perangkat peralihan antara model seluler lama era Nokia dengan ponsel terbaru milik Samsung.
+OS blackberry juga sempat disematkan pada ponsel terbaru mereka berteknologi touchscreen. Alih-alih mampu memberikan alternatif pilihan bagi dunia smartphone, Blackberry justru makin terpuruk dengan berkembangnya ponsel Android.
+Konsumen sudah terlalu nyaman dengan berbagai fitur dan aplikasi yang disediakan oleh Android dan Play Store.
+Itulah tadi pembahasan mengenai pengertian sistem operasi beserta fungsi dan jenis-jenisnya. Sebenarnya masih banyak OS yang belum disebutkan.
