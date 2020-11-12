@@ -1,4 +1,4 @@
-# Mini Search Engine
+# Doremi Search Engine
 Tugas Besar Aljabar Linier dan Geometri 2020/2021
 
 ## Table of contents
