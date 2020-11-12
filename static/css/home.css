@@ -23,6 +23,16 @@ a, p {
     margin: 3rem auto;
 }
 
+.hasil {
+    padding: 0 5rem;
+}
+
+.kiri {
+    margin: 0;
+    text-align: justify;
+    padding: 0 5rem;
+}
+
 table {
     margin: 0 auto;
 }
