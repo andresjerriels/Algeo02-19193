@@ -33,7 +33,7 @@
     {% endif %}
 
     <div id="submitfiles">
-        <p>Unggah Dokumen Disini! (Dokumen harus bertipe txt dan nama dokumen tidak boleh sama dengan yang sudah ada)</p>
+        <p>Unggah Dokumen Disini!<br>(Dokumen harus bertipe txt dan nama dokumen tidak boleh sama dengan yang sudah ada)</p>
         <form method=post enctype=multipart/form-data>
             <input id="inp" type=file name="files[]" multiple="true" accept=".txt">
             <br>
@@ -44,7 +44,7 @@
 
 
     <div class="container">
-        <p>Unggah URL Wikipedia disini!</p>
+        <p>Atau<br>Unggah URL Wikipedia disini!</p>
         <form role="form" method='POST' action='/'>
             <div>
                 <input type="text" name="url" class="form-control" id="url-box" placeholder="    Masukkan URL..." autofocus required>
