@@ -75,7 +75,7 @@
     <h2 id="hasilpencarian">Hasil Pencarian</h2>
     {% endif %}
     {% for element in array %}
-    <a href="/uploads/{{ element.get('name') }}">{{ element.get('name') }}</a>
+    <a href="/uploads/{{ element.get('name') }}" class="kiri">{{ element.get('name') }}</a>
     <p class="kiri">Jumlah kata: {{ element.get('count') }}</p>
     <p class="kiri">Tingkat kemiripan: {{ element.get('cos') }}%</p>
     <p class="kiri">{{ element.get('first') }}</p>
