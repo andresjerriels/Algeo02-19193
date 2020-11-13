@@ -8,7 +8,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-UPLOAD_FOLDER = './src/uploads'
+UPLOAD_FOLDER = 'uploads' # Windows pake 'uploads', mac pake './src/uploads'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
@@ -48,7 +48,7 @@ def upload_file():
                 filename = filename.replace(" ", "")
                 filename = filename + ".txt"
 
-                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), "w") as text_file:
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), "w", encoding='utf-8') as text_file:
                     text_file.write(raw)
 
                 new_file = Documents(name=filename)
