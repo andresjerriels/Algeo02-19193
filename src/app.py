@@ -8,7 +8,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-UPLOAD_FOLDER = 'uploads' # Windows pake 'uploads', mac pake './src/uploads'
+UPLOAD_FOLDER = '../src/uploads' # Windows pake '../src/uploads', Mac pake './src/uploads'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app = Flask(__name__)
