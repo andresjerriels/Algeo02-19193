@@ -77,7 +77,7 @@
     {% for element in array %}
     <a href="/uploads/{{ element.get('name') }}" class="kiri">{{ element.get('name') }}</a>
     <p class="kiri">Jumlah kata: {{ element.get('count') }}</p>
-    <p class="kiri">Tingkat kemiripan: {{ element.get('cos') }}%</p>
+    <p class="kiri">Tingkat kemiripan: {{ "{:.2f}".format(element.get('cos')) }}%</p>
     <p class="kiri">{{ element.get('first') }}</p>
     <br>
     {% endfor %}

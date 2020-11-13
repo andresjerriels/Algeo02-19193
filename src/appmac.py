@@ -41,8 +41,12 @@ def upload_file():
                 return 'There was an issue uploading your files'
 
             if r:
+                raw = ""
                 soup = BeautifulSoup(r.text, 'html.parser')
-                raw = soup.get_text()
+                soup_p = soup.find('div', { "id": "mw-content-text"})
+                raw_table = soup_p.find_all('p')
+                for s in raw_table:
+                    raw = raw + s.get_text()
                 filename = soup.title.string
                 filename = filename.partition('-')[0]
                 filename = filename.replace(" ", "")
@@ -97,7 +101,7 @@ from flask import send_from_directory
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     txt = Path(os.path.join(app.config['UPLOAD_FOLDER'], filename)).read_text(encoding='utf-8')
-    text = txt.replace('\n', '')
+    text = txt.replace('\n', ' ')
     return render_template('text.html', title=filename, text=text)
 
 from cosine_sim import *
@@ -127,7 +131,7 @@ def search_query():
         for path in Path(UPLOAD_FOLDER).iterdir():
             if path.is_file():
                 txt = Path(path).read_text(encoding='utf-8')
-                text = txt.replace('\n', '')
+                text = txt.replace('\n', ' ')
                 first = take1sentence(text)
                 jmlkata = len(text.split())
                 name = path_leaf(path)
@@ -140,7 +144,7 @@ def search_query():
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
                 cos *= 100 # ubah ke persen
-                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': "{:.2f}".format(round(cos, 2))}
+                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
                 array.append(elmt) # nambah element ke array
 
                 tableheader.append(name)
