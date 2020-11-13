@@ -134,6 +134,7 @@ def search_query():
 
                 step1_Y = case_folding(text)
                 stemmed_Y = stemming(step1_Y)
+                stemmed_Y = filtering(stemmed_Y)
                 tokenized_Y = tokenize(stemmed_Y)
 
                 rvector = set(tokenized_X).union(set(tokenized_Y))
