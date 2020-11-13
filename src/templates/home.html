@@ -9,7 +9,7 @@
 <div class="files">
     <h1>Welcome to Doremi Search Engine</h1>
     {% if filenames|length < 1 %}
-    <p>Belum ada dokumen. Silahkan unggah di bawah ini.</p>
+    <p>Belum ada dokumen.<br>Silahkan unggah dokumen di bawah ini atau Anda juga dapat memasukkan sebuah URL Wikipedia Indonesia (Pilih salah satu).</p>
     {% else %}
     <p>Daftar Dokumen</p>
     <table>
@@ -33,7 +33,7 @@
     {% endif %}
 
     <div id="submitfiles">
-        <p>Unggah Dokumen Disini! (Dokumen harus bertipe txt dan nama dokumen tidak boleh sama dengan yang sudah ada)</p>
+        <p>Unggah Dokumen Disini!<br>(Dokumen harus bertipe txt dan nama dokumen tidak boleh sama dengan yang sudah ada)</p>
         <form method=post enctype=multipart/form-data>
             <input id="inp" type=file name="files[]" multiple="true" accept=".txt">
             <br>
@@ -41,15 +41,33 @@
             <input type=submit value=Unggah class="button">
         </form>
     </div>
+
+
+    <div class="container">
+        <p>Atau<br>Unggah URL Wikipedia disini!</p>
+        <form role="form" method='POST' action='/'>
+            <div>
+                <input type="text" name="url" class="form-control" id="url-box" placeholder="    Masukkan URL..." autofocus required>
+            </div>
+            <br>
+            <button type="submit" class="button">Unggah</button>
+        </form>
+        <br>
+        <br>
+    </div>
 </div>
 
+
+
 <div class="form">
+    {% if filenames|length > 0 %}
     <form action="/search" method="POST">
         <p>Cari Dokumen Disini!</p>
         <input type="text" name="query" value="{{ query }}" placeholder="    Masukkan kueri" id="searchbar" required>
         <br>
         <input type="submit" value="Cari!" class="button">
     </form>
+    {% endif %}
 </div>
 
 <div class="hasil">
@@ -90,6 +108,6 @@
 </div>
 
 <footer>
-    <a href="perihal.html">Perihal</a>
+    <a href="/about">Tentang</a>
 </footer>
 {% endblock %}
