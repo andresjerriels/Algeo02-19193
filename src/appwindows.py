@@ -79,9 +79,6 @@ def upload_file():
         filenames = Documents.query.order_by(Documents.date_uploaded).all()
         return render_template('home.html', filenames=filenames)
 
-
-
-
 @app.route('/delete/<string:name>')
 def delete_file(name):
     file_to_delete = Documents.query.get_or_404(name)
@@ -99,7 +96,9 @@ from flask import send_from_directory
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    return send_from_directory('uploads', filename)
+    txt = Path(os.path.join(app.config['UPLOAD_FOLDER'], filename)).read_text(encoding='utf-8')
+    text = txt.replace('\n', '')
+    return render_template('text.html', title=filename, text=text)
 
 from cosine_sim import *
 import numpy as np

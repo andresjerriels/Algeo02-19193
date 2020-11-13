@@ -1,0 +1,587 @@
+
+
+
+
+Regresi linear - Wikipedia bahasa Indonesia, ensiklopedia bebas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Regresi linear
+
+Dari Wikipedia bahasa Indonesia, ensiklopedia bebas
+
+Ini adalah versi stabil, diperiksa pada tanggal 5 Februari 2019.
+Ada 2 perubahan tertunda menunggu peninjauan.AkurasiTerperiksa
+
+
+
+
+
+
+Loncat ke navigasi
+Loncat ke pencarian
+Artikel ini perlu dirapikan agar memenuhi standar WikipediaMerapikan artikel bisa berupa membagi artikel ke dalam paragraf atau wikifikasi artikel. Setelah dirapikan, tolong hapus pesan ini.
+Dalam statistika, regresi linear adalah sebuah pendekatan untuk memodelkan hubungan antara variable terikat Y dan satu atau lebih variable bebas yang disebut X. Salah satu kegunaan dari regresi linear adalah untuk melakukan prediksi berdasarkan data-data yang telah dimiliki sebelumnya. Hubungan di antara variable-variabel tersebut disebut sebagai model regresi linear. Berdasarkan penggunaan variable bebas, maka regresi linear dapat dibagi menjadi dua, yaitu regresi linear univariate dan regresi linear multivariate.
+
+Regresi Linear Univariate[sunting | sunting sumber]
+Pada regresi linear univariate, variable bebas yang terlibat hanya satu saja. Oleh karena hanya memiliki satu variable bebas, maka hanya akan terdapat variable input X dan output Y. Kedua variable ini akan dimodelkan sebagai sumbu X dan Y pada diagram kartesius. Pada regresi linear tipe ini, model regresi linear ditentukan sebagai berikut.
+
+
+
+
+
+h
+
+w
+
+
+(
+x
+)
+=
+
+w
+
+1
+
+
+x
++
+
+w
+
+0
+
+
+
+
+{\displaystyle h_{w}(x)=w_{1}x+w_{0}}
+
+
+dimana 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ merupakan nilai yang akan dicari sedemikian sehingga nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ menjadi optimal dan 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ merupakan variable bebas atau input. Proses pencarian nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ dapat dilakukan dengan beberapa cara diantaranya dengan menggunakan pendekatan least square, maximum likehood, atau algoritme gradient descent. Pada dasarnya, pencarian nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ dilakukan hingga nilai error yang dihasilkan merupakan nilai yang paling minimal [1]. Fungsi error yang digunakan adalah sebagai berikut.
+
+
+
+
+E
+(
+w
+)
+=
+
+
+1
+
+2
+N
+
+
+
+
+∑
+
+i
+=
+1
+
+
+N
+
+
+(
+
+h
+
+w
+
+
+(
+
+x
+
+i
+
+
+)
+−
+
+t
+
+i
+
+
+
+)
+
+2
+
+
+
+
+{\displaystyle E(w)={\frac {1}{2N}}\sum _{i=1}^{N}(h_{w}(x^{i})-t^{i})^{2}}
+
+
+Dimana 
+
+
+
+N
+
+
+{\displaystyle N}
+
+ merupakan banyaknya data input, 
+
+
+
+
+h
+
+w
+
+
+(
+
+x
+
+i
+
+
+)
+
+
+{\displaystyle h_{w}(x^{i})}
+
+ merupakan model regresi linear, dan 
+
+
+
+t
+
+
+{\displaystyle t}
+
+ adalah target output yang seharusnya.
+
+Regresi Linear Multivariate[sunting | sunting sumber]
+Pada regresi linear multivariate, variable bebas yang terlibat tidak hanya satu saja melainkan beberapa variable bebas. Hal ini dikarenakan input yang digunakan lebih dari satu dimensi. Oleh karena itu, diperlukanlah sebuah model regresi linear yang berbeda dari regresi linear univariate. Model regresi linear multivariate dapat ditentukan sebagai berikut.
+
+
+
+
+
+h
+
+w
+
+
+(
+x
+)
+=
+
+w
+
+0
+
+
++
+
+w
+
+1
+
+
+
+x
+
+1
+
+
++
+
+w
+
+2
+
+
+
+x
+
+2
+
+
++
+⋯
++
+
+w
+
+m
+
+
+
+x
+
+m
+
+
+
+
+{\displaystyle h_{w}(x)=w_{0}+w_{1}x_{1}+w_{2}x_{2}+\dots +w_{m}x_{m}}
+
+
+
+
+
+
+
+h
+
+w
+
+
+(
+x
+)
+=
+
+w
+
+0
+
+
++
+
+∑
+
+i
+=
+0
+
+
+m
+
+
+
+w
+
+i
+
+
+
+x
+
+i
+
+
+
+
+{\displaystyle h_{w}(x)=w_{0}+\sum _{i=0}^{m}w_{i}x_{i}}
+
+
+Dimana 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ juga merupakan nilai yang akan dicari sedemikian sehingga nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ menjadi optimal dan 
+
+
+
+x
+
+
+{\displaystyle x}
+
+ merupakan variable bebas atau input. Proses pencarian nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ juga masih dapat dilakukan dengan menggunakan cara yang sama dengan regresi linear univariate, yaitu dengan menggunakan pendekatan least square, maximum likehood, atau algoritme gradient descent. Pada dasarnya, pencarian nilai 
+
+
+
+w
+
+
+{\displaystyle w}
+
+ dilakukan hingga nilai error yang didapatkan dari fungsi error merupakan nilai yang paling minimal [1]. Fungsi error yang digunakan masih sama dengan regresi linear univariate.
+
+Referensi[sunting | sunting sumber]
+
+^ a b Stuart Russell and Peter Norvig. 2009. Artificial Intelligence: A Modern Approach (3rd ed.). Prentice Hall Press, Upper Saddle River, NJ, USA
+
+
+
+
+
+
+Diperoleh dari "https://id.wikipedia.org/w/index.php?title=Regresi_linear&oldid=14748581"
+Kategori: MatematikaKategori tersembunyi: Artikel yang belum dirapikan Februari 2019
+
+
+
+
+
+
+Menu navigasi
+
+
+
+
+Perkakas pribadi
+
+
+Belum masuk logPembicaraanKontribusiBuat akun baruMasuk log
+
+
+
+
+
+
+Ruang nama
+
+
+HalamanPembicaraan
+
+
+
+
+
+
+Varian
+
+
+
+
+
+
+
+
+
+
+Tampilan
+
+
+BacaPerubahan tertundaSuntingSunting sumberVersi terdahulu
+
+
+
+
+
+
+Lainnya
+
+
+
+
+
+
+
+Pencarian
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Navigasi
+
+
+Halaman UtamaPerubahan terbaruArtikel pilihanPeristiwa terkiniHalaman baruHalaman sembarang
+
+
+
+
+
+Komunitas
+
+
+Warung KopiPortal komunitasBantuan
+
+
+
+
+
+Wikipedia
+
+
+Tentang WikipediaPancapilarKebijakanMenyumbangHubungi kamiBak pasir
+
+
+
+
+
+Bagikan
+
+
+
+
+
+
+
+
+Perkakas
+
+
+Pranala balikPerubahan terkaitHalaman istimewaPranala permanenInformasi halamanKutip halaman iniButir di Wikidata
+
+
+
+
+
+Cetak/ekspor
+
+
+Buat bukuUnduh versi PDFVersi cetak
+
+
+
+
+
+Dalam proyek lain
+
+
+Wikimedia Commons
+
+
+
+
+
+Bahasa lain
+
+
+العربيةAsturianuCatalàČeštinaDeutschΕλληνικάEnglishEspañolEestiEuskaraفارسیSuomiFrançaisGalegoעבריתHrvatskiMagyarՀայերենItaliano日本語한국어МакедонскиNorsk bokmålPolskiPortuguêsРусскийSimple EnglishSlovenščinaСрпски / srpskiSvenskaУкраїнськаTiếng Việt中文粵語
+Sunting interwiki
+
+
+
+
+
+
+ Halaman ini terakhir diubah pada 5 Februari 2019, pukul 15.28.
+Teks tersedia di bawah Lisensi Atribusi-BerbagiSerupa Creative Commons; ketentuan tambahan mungkin berlaku. Lihat Ketentuan Penggunaan untuk lebih jelasnya.
+
+
+Kebijakan privasi
+Tentang Wikipedia
+Penyangkalan
+Tampilan seluler
+Pengembang
+Statistik
+Pernyataan kuki
+
+
+
+
+
+
+
+
+
+
