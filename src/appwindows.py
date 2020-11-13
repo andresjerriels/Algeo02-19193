@@ -99,7 +99,7 @@ from flask import send_from_directory
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+    return send_from_directory('uploads', filename)
 
 from cosine_sim import *
 import numpy as np
