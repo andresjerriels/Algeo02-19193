@@ -127,7 +127,7 @@ def search_query():
         tftable = [firstrow] # baris pertama pada matriks tftable
         for path in Path(UPLOAD_FOLDER).iterdir():
             if path.is_file():
-                txt = Path(path).read_text()
+                txt = Path(path).read_text(encoding='utf-8')
                 text = txt.replace('\n', '')
                 first = take1sentence(text)
                 jmlkata = len(text.split())
