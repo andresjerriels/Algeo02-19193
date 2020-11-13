@@ -79,9 +79,6 @@ def upload_file():
         filenames = Documents.query.order_by(Documents.date_uploaded).all()
         return render_template('home.html', filenames=filenames)
 
-
-
-
 @app.route('/delete/<string:name>')
 def delete_file(name):
     file_to_delete = Documents.query.get_or_404(name)
