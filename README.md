@@ -35,8 +35,10 @@ Khusus untuk library nltk, silahkan menjalankan python pada terminal, lalu tulis
 `nltk.download()`
 
 Sebelum menjalankan program, pastikan database untuk menyimpan dokumen sudah dibuat dengan menjalankan perintah pada terminal:
-* `python generatedb.py` (untuk sistem operasi Windows dan Linux)
-* `python3 generatedb.py` (untuk sistem operasi MacOS)
+* `python generatedbwin.py` (untuk sistem operasi Windows dan Linux)
+* `python3 generatedbmac.py` (untuk sistem operasi MacOS)
+
+Kemudian silahkan menjalankan `appmac.py/appwindows.py` (bergantung sistem operasi anda) untuk memulai program.
 
 ## Inspiration
 Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari sebuah [website](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online.
