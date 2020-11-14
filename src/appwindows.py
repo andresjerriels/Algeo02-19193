@@ -144,7 +144,7 @@ def search_query():
                 rvector = set(tokenized_X).union(set(tokenized_Y))
                 cos, lout = cosine_sim(rvector, tokenized_X, tokenized_Y) # ngitung nilai cosine dan jmlh kemunculan kata query
                 cos *= 100 # ubah ke persen
-                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': "{:.2f}".format(round(cos, 2))}
+                elmt = {'name': name, 'path': path, 'first': first, 'text': text, 'count': jmlkata, 'cos': cos}
                 array.append(elmt) # nambah element ke array
 
                 tableheader.append(name)
