@@ -38,7 +38,11 @@ Sebelum menjalankan program, pastikan database untuk menyimpan dokumen sudah dib
 * `python generatedbwin.py` (untuk sistem operasi Windows dan Linux)
 * `python3 generatedbmac.py` (untuk sistem operasi MacOS)
 
-Kemudian silahkan menjalankan `appmac.py/appwindows.py` (bergantung sistem operasi anda) untuk memulai program.
+Kemudian silahkan jalankan 
+* `appmac.py` (untuk sistem operasi MacOS)
+* `appwindows.py` (untuk sistem operasi Windows) 
+
+untuk memulai program. Setelah server berjalan, silahkan masuk ke browser dan masuk ke local host `http://127.0.0.1:5000/`.
 
 ## Inspiration
 Fungsi cosine similarity dan sistem temu balik aplikasi kami pelajari dari sebuah [website](https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-12-Aplikasi-dot-product-pada-IR.pdf) yang ditulis oleh Rinaldi Munir. Proses pembuatan Flask, database SQL, HTML dan CSS kami pelajari dari sumber online.
