@@ -34,8 +34,10 @@ Khusus untuk library nltk, silahkan menjalankan python pada terminal, lalu tulis
 
 `nltk.download()`
 
+Instruksi lebih lengkap bisa dilihat di [sini](https://www.guru99.com/download-install-nltk.html)
+
 Sebelum menjalankan program, pastikan database untuk menyimpan dokumen sudah dibuat dengan menjalankan perintah pada terminal:
-* `python generatedbwin.py` (untuk sistem operasi Windows dan Linux)
+* `python generatedbwin.py` (untuk sistem operasi Windows)
 * `python3 generatedbmac.py` (untuk sistem operasi MacOS)
 
 Kemudian silahkan jalankan 
